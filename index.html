@@ -26,44 +26,44 @@
       -webkit-touch-callout: none;
       overscroll-behavior: none;
     }
-
+ 
     input, textarea, select {
       -webkit-user-select: text !important;
       user-select: text !important;
     }
-    
+     
     * {
       font-family: 'Outfit', sans-serif;
     }
-    
+     
     .heading-font {
       font-family: 'Space Grotesk', sans-serif;
     }
-    
+     
     .glass {
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.15);
     }
-    
+     
     .glass-dark {
       background: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+     
    .gradient-bg {
       background-color: #1a1a2e; 
       background: linear-gradient(rgba(10, 10, 20, 0.9), rgba(26, 26, 46, 0.9)), 
-                  url('https://raw.githubusercontent.com/RohitPhogat222/liforawellness.index.html/main/Screenshot%202025-03-07%20193036.png');
+                   url('https://raw.githubusercontent.com/RohitPhogat222/liforawellness.index.html/main/Screenshot%202025-03-07%20193036.png');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
     }
-    
+     
     .blob {
       position: absolute;
       border-radius: 50%;
@@ -71,44 +71,44 @@
       opacity: 0.5;
       animation: float 8s ease-in-out infinite;
     }
-    
+     
     .blob-1 { width: 400px; height: 400px; background: linear-gradient(135deg, #00f2fe, #4facfe); top: -100px; left: -100px; }
     .blob-2 { width: 350px; height: 350px; background: linear-gradient(135deg, #f093fb, #f5576c); bottom: 20%; right: -50px; animation-delay: -4s; }
     .blob-3 { width: 300px; height: 300px; background: linear-gradient(135deg, #a18cd1, #fbc2eb); bottom: -100px; left: 30%; animation-delay: -2s; }
-    
+     
     @keyframes float {
       0%, 100% { transform: translate(0, 0) scale(1); }
       33% { transform: translate(30px, -30px) scale(1.05); }
       66% { transform: translate(-20px, 20px) scale(0.95); }
     }
-    
+     
     .animate-float { animation: float 6s ease-in-out infinite; }
     .gallery-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    .gallery-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 25px 50px -12px rgba(79, 172, 254, 0.4); }
-    .gallery-card:active { transform: translateY(-4px) scale(1.01); }
-    .gallery-card:hover .card-overlay, .gallery-card:active .card-overlay { opacity: 1; }
-    .gallery-card:hover img, .gallery-card:active img { transform: scale(1.1); }
+   .gallery-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 25px 50px -12px rgba(79, 172, 254, 0.4); }
+   .gallery-card:active { transform: translateY(-4px) scale(1.01); }
+   .gallery-card:hover .card-overlay, .gallery-card:active .card-overlay { opacity: 1; }
+   .gallery-card:hover img, .gallery-card:active img { transform: scale(1.1); }
     .card-overlay { opacity: 0; transition: opacity 0.3s ease; }
     .skill-tag { transition: all 0.3s ease; }
     .skill-tag:hover { transform: scale(1.05); background: rgba(255, 255, 255, 0.2); }
     .skill-tag:active { transform: scale(0.98); }
     .upload-zone { border: 2px dashed rgba(255, 255, 255, 0.3); transition: all 0.3s ease; }
     .upload-zone:hover { border-color: rgba(79, 172, 254, 0.8); background: rgba(79, 172, 254, 0.1); }
-    .upload-zone:active { border-color: rgba(79, 172, 254, 1); background: rgba(79, 172, 254, 0.2); }
+   .upload-zone:active { border-color: rgba(79, 172, 254, 1); background: rgba(79, 172, 254, 0.2); }
     .pagination-btn { transition: all 0.3s ease; }
-    .pagination-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.2); transform: scale(1.1); }
-    .pagination-btn:active:not(:disabled) { background: rgba(255, 255, 255, 0.25); transform: scale(0.95); }
-    .pagination-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+   .pagination-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.2); transform: scale(1.1); }
+   .pagination-btn:active:not(:disabled) { background: rgba(255, 255, 255, 0.25); transform: scale(0.95); }
+   .pagination-btn:disabled { opacity: 0.3; cursor: not-allowed; }
     .search-input { transition: all 0.3s ease; }
-    .search-input:focus { box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.3); }
+   .search-input:focus { box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.3); }
     .fade-in { animation: fadeIn 0.5s ease forwards; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
-    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
-
+     
+   ::-webkit-scrollbar { width: 8px; }
+   ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
+   ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
+   ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
+ 
     .tab-btn { transition: all 0.3s ease; }
     .tab-btn.active { background: rgba(255, 255, 255, 0.2); border-bottom: 2px solid rgba(79, 172, 254, 0.8); }
     .input-field { transition: all 0.3s ease; -webkit-appearance: none; appearance: none; font-size: 16px; }
@@ -123,13 +123,13 @@
     @keyframes slideLeft { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-30px); } }
     .slide-right { animation: slideRight 0.4s ease forwards; }
     @keyframes slideRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-    
+     
     /* NEW ANIMATIONS FOR SETTINGS DRAWER */
     .slide-down { animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     .slide-up { animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     @keyframes slideUp { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-100%); opacity: 0; } }
-
+ 
     .error-message { color: #f87171; font-size: 0.875rem; margin-top: 0.5rem; }
     .form-group { margin-bottom: 1.5rem; }
     .verification-code { font-family: 'Space Grotesk', monospace; letter-spacing: 0.25rem; font-size: 1.25rem; font-weight: bold; }
@@ -149,18 +149,16 @@
       .blob-1 { width: 300px; height: 300px; top: -80px; left: -80px; }
       .blob-2 { width: 250px; height: 250px; right: -40px; }
       .blob-3 { width: 200px; height: 200px; }
-      #mascot-container { width: 200px; height: 200px; }
+     #mascot-container { width: 200px; height: 200px; }
     }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
+ <style>@view-transition { navigation: auto; }</style>
  </head>
  <body class="h-full gradient-bg text-white overflow-auto">
-  <div class="min-h-full relative overflow-hidden"><!-- Animated Blobs -->
-   <div class="blob blob-1"></div>
+  <div class="min-h-full relative overflow-hidden"><div class="blob blob-1"></div>
    <div class="blob blob-2"></div>
    <div class="blob blob-3"></div>
    
-   <!-- Login / Register / Reset Modal -->
    <div id="login-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop bg-black/70" style="backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);">
     <div class="glass modal-content rounded-3xl p-8 sm:p-12 w-full max-w-md max-h-screen overflow-y-auto relative">
         <button id="close-modal-btn" class="absolute top-6 right-6 text-white/60 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center z-10"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
@@ -168,20 +166,20 @@
             <div class="flex items-center justify-between mb-6"><h2 class="heading-font text-2xl font-bold">Developer Login</h2></div>
             <div class="info-banner rounded-lg p-4 mb-6"><p class="text-sm text-white/80">📝 Please fill in the details to use the website as a developer</p></div>
             <form id="login-form" class="space-y-4">
-                <div class="form-group"><label class="block text-sm font-medium mb-2">Username</label><input type="text" id="username-input" placeholder="Enter your username" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required><div id="username-error" class="error-message hidden"></div></div>
-                <div class="form-group"><label class="block text-sm font-medium mb-2">Password</label><input type="password" id="password-input" placeholder="Enter your password" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required><div id="password-error" class="error-message hidden"></div></div>
-                <button type="submit" class="w-full glass px-6 py-3 rounded-lg font-semibold hover:bg-white/15 active:bg-white/20 transition-all flex items-center justify-center gap-2"> <span>🔓</span> <span>Login to Dashboard</span> </button>
+               <div class="form-group"><label class="block text-sm font-medium mb-2">Username</label><input type="text" id="username-input" placeholder="Enter your username" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required><div id="username-error" class="error-message hidden"></div></div>
+               <div class="form-group"><label class="block text-sm font-medium mb-2">Password</label><input type="password" id="password-input" placeholder="Enter your password" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required><div id="password-error" class="error-message hidden"></div></div>
+               <button type="submit" class="w-full glass px-6 py-3 rounded-lg font-semibold hover:bg-white/15 active:bg-white/20 transition-all flex items-center justify-center gap-2"> <span>🔓</span> <span>Login to Dashboard</span> </button>
             </form>
             <div class="text-center mt-6"><p class="text-white/60 text-sm mb-3">Forgot your password?</p><button id="forgot-password-btn" class="text-blue-400 hover:text-blue-300 active:text-blue-500 transition-colors text-sm underline"> Click here to reset </button>
-                <div class="mt-4 pt-4 border-t border-white/10"><p class="text-white/60 text-sm">Not registered? <button id="get-registered-btn" class="text-green-400 hover:text-green-300 active:text-green-500 transition-colors font-medium ml-1 hover:underline">Get registered</button></p></div>
-            </div>
+               <div class="mt-4 pt-4 border-t border-white/10"><p class="text-white/60 text-sm">Not registered? <button id="get-registered-btn" class="text-green-400 hover:text-green-300 active:text-green-500 transition-colors font-medium ml-1 hover:underline">Get registered</button></p></div>
+           </div>
         </div>
         <div id="register-step-1" class="hidden slide-right">
             <div class="flex items-center justify-between mb-6"><h2 class="heading-font text-2xl font-bold">User Registration</h2><button class="back-to-login text-white/50 hover:text-white text-sm">Back</button></div>
             <form id="reg-form-1" class="space-y-4">
-                <div class="form-group"><label class="block text-sm font-medium mb-2">Username</label><input type="text" id="reg-username" placeholder="Choose a username" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required></div>
-                <div class="form-group"><label class="block text-sm font-medium mb-2">Email ID or Phone No</label><input type="text" id="reg-contact" placeholder="Enter email or phone" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required><div id="reg-error-1" class="error-message hidden"></div></div>
-                <button type="submit" class="w-full glass px-6 py-3 rounded-lg font-semibold hover:bg-white/15 active:bg-white/20 transition-all flex items-center justify-center gap-2"> <span>📩</span> <span>Send OTP</span> </button>
+               <div class="form-group"><label class="block text-sm font-medium mb-2">Username</label><input type="text" id="reg-username" placeholder="Choose a username" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required></div>
+               <div class="form-group"><label class="block text-sm font-medium mb-2">Email ID or Phone No</label><input type="text" id="reg-contact" placeholder="Enter email or phone" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required><div id="reg-error-1" class="error-message hidden"></div></div>
+               <button type="submit" class="w-full glass px-6 py-3 rounded-lg font-semibold hover:bg-white/15 active:bg-white/20 transition-all flex items-center justify-center gap-2"> <span>📩</span> <span>Send OTP</span> </button>
             </form>
         </div>
         <div id="register-step-2" class="hidden slide-right">
@@ -192,9 +190,9 @@
         <div id="register-step-3" class="hidden slide-right">
             <div class="flex items-center justify-between mb-6"><h2 class="heading-font text-2xl font-bold">Create Password</h2></div>
             <form id="reg-form-3" class="space-y-4">
-                <div class="form-group"><label class="block text-sm font-medium mb-2">Create Password</label><input type="password" id="reg-pass" placeholder="New password" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required></div>
-                <div class="form-group"><label class="block text-sm font-medium mb-2">Confirm Password</label><input type="password" id="reg-confirm-pass" placeholder="Confirm password" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required><div id="reg-error-3" class="error-message hidden"></div></div>
-                <button type="submit" class="w-full glass px-6 py-3 rounded-lg font-semibold hover:bg-white/15 active:bg-white/20 transition-all flex items-center justify-center gap-2"> <span>💾</span> <span>Confirm Registration</span> </button>
+               <div class="form-group"><label class="block text-sm font-medium mb-2">Create Password</label><input type="password" id="reg-pass" placeholder="New password" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required></div>
+               <div class="form-group"><label class="block text-sm font-medium mb-2">Confirm Password</label><input type="password" id="reg-confirm-pass" placeholder="Confirm password" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" required><div id="reg-error-3" class="error-message hidden"></div></div>
+               <button type="submit" class="w-full glass px-6 py-3 rounded-lg font-semibold hover:bg-white/15 active:bg-white/20 transition-all flex items-center justify-center gap-2"> <span>💾</span> <span>Confirm Registration</span> </button>
             </form>
         </div>
         <div id="reset-step-1" class="hidden slide-right">
@@ -211,359 +209,340 @@
         </div>
     </div>
    </div>
-
-   <!-- SETTINGS DRAWER (TOP TO BOTTOM) -->
+ 
    <div id="settings-drawer" class="fixed inset-x-0 top-0 z-[80] hidden glass-dark border-b border-white/10 shadow-2xl flex flex-col max-h-[85vh] overflow-y-auto" style="backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);">
         <div class="max-w-4xl mx-auto w-full p-6 sm:p-8">
             <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
                 <h2 class="heading-font text-2xl font-bold flex items-center gap-3"><span>⚙️</span> Settings & Preferences</h2>
-                <button onclick="toggleSettings()" class="w-10 h-10 rounded-full glass hover:bg-white/20 flex items-center justify-center transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-            </div>
-
+               <button onclick="toggleSettings()" class="w-10 h-10 rounded-full glass hover:bg-white/20 flex items-center justify-center transition-colors">
+                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+               </button>
+           </div>
+ 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Appearance & Account -->
-                <div class="space-y-6">
-                    <div class="glass p-5 rounded-2xl flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center">🌙</div>
-                            <div>
+               <div class="space-y-6">
+                   <div class="glass p-5 rounded-2xl flex items-center justify-between">
+                       <div class="flex items-center gap-3">
+                           <div class="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center">🌙</div>
+                           <div>
                                 <h3 class="font-semibold">Dark Mode</h3>
                                 <p class="text-xs text-white/50">Adjust system theme</p>
-                            </div>
-                        </div>
-                        <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" checked class="sr-only peer">
-                            <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
-                        </label>
-                    </div>
-
-                    <div class="glass p-5 rounded-2xl flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">🌐</div>
-                            <div>
+                           </div>
+                       </div>
+                       <label class="relative inline-flex items-center cursor-pointer">
+                           <input type="checkbox" checked class="sr-only peer">
+                           <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                       </label>
+                   </div>
+ 
+                   <div class="glass p-5 rounded-2xl flex items-center justify-between">
+                       <div class="flex items-center gap-3">
+                           <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">🌐</div>
+                           <div>
                                 <h3 class="font-semibold">Language</h3>
                                 <p class="text-xs text-white/50">Select interface language</p>
-                            </div>
-                        </div>
-                        <select class="bg-black/30 border border-white/10 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-blue-500">
-                            <option>English (US)</option>
-                            <option>Spanish</option>
-                            <option>French</option>
-                            <option>Japanese</option>
-                            <option>Hindi</option>
-                        </select>
-                    </div>
-
-                    <div class="glass p-5 rounded-2xl flex items-center justify-between cursor-pointer hover:bg-white/5 transition-colors" onclick="switchAccount()">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">🔄</div>
-                            <div>
+                           </div>
+                       </div>
+                       <select class="bg-black/30 border border-white/10 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-blue-500">
+                           <option>English (US)</option>
+                           <option>Spanish</option>
+                           <option>French</option>
+                           <option>Japanese</option>
+                           <option>Hindi</option>
+                       </select>
+                   </div>
+ 
+                   <div class="glass p-5 rounded-2xl flex items-center justify-between cursor-pointer hover:bg-white/5 transition-colors" onclick="switchAccount()">
+                       <div class="flex items-center gap-3">
+                           <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">🔄</div>
+                           <div>
                                 <h3 class="font-semibold">Switch Account</h3>
                                 <p class="text-xs text-white/50">Log out and change user</p>
-                            </div>
-                        </div>
-                        <svg class="w-5 h-5 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </div>
-                </div>
-
-                <!-- Viewing History -->
-                <div class="glass p-5 rounded-2xl flex flex-col h-full">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center">🕒</div>
-                            <div>
+                           </div>
+                       </div>
+                       <svg class="w-5 h-5 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                   </div>
+               </div>
+ 
+               <div class="glass p-5 rounded-2xl flex flex-col h-full">
+                   <div class="flex items-center justify-between mb-4">
+                       <div class="flex items-center gap-3">
+                           <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center">🕒</div>
+                           <div>
                                 <h3 class="font-semibold">Viewing History</h3>
                                 <p class="text-xs text-white/50">Previously visited images</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-2">
-                            <button onclick="toggleHistoryTracking()" class="text-xs px-2 py-1 rounded bg-white/10 hover:bg-white/20 transition-colors" id="history-toggle-btn">Pause</button>
-                            <button onclick="clearHistory()" class="text-xs px-2 py-1 rounded bg-red-500/20 text-red-300 hover:bg-red-500/30 transition-colors">Clear</button>
-                        </div>
-                    </div>
-                    
-                    <div id="history-list" class="flex-1 overflow-x-auto whitespace-nowrap pb-2 space-x-3 min-h-[100px] flex items-center">
-                        <p class="text-white/30 text-sm w-full text-center italic">No recently viewed images.</p>
-                    </div>
-                </div>
-            </div>
+                           </div>
+                       </div>
+                       <div class="flex gap-2">
+                           <button onclick="toggleHistoryTracking()" class="text-xs px-2 py-1 rounded bg-white/10 hover:bg-white/20 transition-colors" id="history-toggle-btn">Pause</button>
+                           <button onclick="clearHistory()" class="text-xs px-2 py-1 rounded bg-red-500/20 text-red-300 hover:bg-red-500/30 transition-colors">Clear</button>
+                       </div>
+                   </div>
+                   
+                   <div id="history-list" class="flex-1 overflow-x-auto whitespace-nowrap pb-2 space-x-3 min-h-[100px] flex items-center">
+                       <p class="text-white/30 text-sm w-full text-center italic">No recently viewed images.</p>
+                   </div>
+               </div>
+           </div>
         </div>
    </div>
-
-   <!-- SUBSCRIPTION MODAL -->
+ 
    <div id="subscription-modal" class="fixed inset-0 z-[70] hidden flex items-center justify-center p-4 modal-backdrop bg-black/80">
         <div class="glass modal-content rounded-3xl p-8 max-w-2xl w-full relative max-h-[90vh] overflow-y-auto">
             <button onclick="document.getElementById('subscription-modal').classList.add('hidden')" class="absolute top-6 right-6 p-2 rounded-full hover:bg-white/10 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
             <h2 class="heading-font text-2xl font-bold mb-6 flex items-center gap-3"><span>💎</span> Your Subscriptions</h2>
             
-            <!-- Active Plan -->
             <div class="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-2xl p-6 border border-white/10 mb-8">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-wider text-green-400 mb-1 block">Active Plan</span>
-                        <h3 class="text-2xl font-bold" id="modal-plan-name">Explorer Tier</h3>
-                    </div>
-                    <span class="bg-white/10 px-3 py-1 rounded-full text-xs font-mono" id="modal-plan-expiry">Valid until: Forever</span>
-                </div>
-                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2">
-                    <div class="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full" style="width: 100%"></div>
-                </div>
+               <div class="flex justify-between items-start mb-4">
+                   <div>
+                       <span class="text-xs font-bold uppercase tracking-wider text-green-400 mb-1 block">Active Plan</span>
+                       <h3 class="text-2xl font-bold" id="modal-plan-name">Explorer Tier</h3>
+                   </div>
+                   <span class="bg-white/10 px-3 py-1 rounded-full text-xs font-mono" id="modal-plan-expiry">Valid until: Forever</span>
+               </div>
+               <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2">
+                   <div class="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full" style="width: 100%"></div>
+               </div>
                 <p class="text-xs text-white/50 text-right">Time remaining: ∞</p>
             </div>
-
-            <!-- Recommendations -->
+ 
             <h3 class="font-bold text-lg mb-4 text-white/80">Recommended Upgrades</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="glass-dark p-4 rounded-xl border border-yellow-500/30 hover:bg-yellow-500/10 transition-colors cursor-pointer" onclick="closeSubsAndScroll()">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-bold text-yellow-400">Creator Pass</span>
-                        <span class="font-bold">$19/mo</span>
-                    </div>
-                    <p class="text-xs text-white/60 mb-3">Unlock unlimited uploads and analytics.</p>
-                    <button class="w-full py-2 rounded-lg bg-yellow-500/20 text-yellow-300 text-xs font-bold hover:bg-yellow-500/30">View Details</button>
-                </div>
-                <div class="glass-dark p-4 rounded-xl border border-pink-500/30 hover:bg-pink-500/10 transition-colors cursor-pointer" onclick="closeSubsAndOpenStore()">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-bold text-pink-400">Asset Bundle</span>
-                        <span class="font-bold">$79</span>
-                    </div>
-                    <p class="text-xs text-white/60 mb-3">500+ Premium 3D assets one-time buy.</p>
-                    <button class="w-full py-2 rounded-lg bg-pink-500/20 text-pink-300 text-xs font-bold hover:bg-pink-500/30">Go to Store</button>
-                </div>
+               <div class="glass-dark p-4 rounded-xl border border-yellow-500/30 hover:bg-yellow-500/10 transition-colors cursor-pointer" onclick="closeSubsAndScroll()">
+                   <div class="flex justify-between mb-2">
+                       <span class="font-bold text-yellow-400">Creator Pass</span>
+                       <span class="font-bold">$19/mo</span>
+                   </div>
+                   <p class="text-xs text-white/60 mb-3">Unlock unlimited uploads and analytics.</p>
+                   <button class="w-full py-2 rounded-lg bg-yellow-500/20 text-yellow-300 text-xs font-bold hover:bg-yellow-500/30">View Details</button>
+               </div>
+               <div class="glass-dark p-4 rounded-xl border border-pink-500/30 hover:bg-pink-500/10 transition-colors cursor-pointer" onclick="closeSubsAndOpenStore()">
+                   <div class="flex justify-between mb-2">
+                       <span class="font-bold text-pink-400">Asset Bundle</span>
+                       <span class="font-bold">$79</span>
+                   </div>
+                   <p class="text-xs text-white/60 mb-3">500+ Premium 3D assets one-time buy.</p>
+                   <button class="w-full py-2 rounded-lg bg-pink-500/20 text-pink-300 text-xs font-bold hover:bg-pink-500/30">Go to Store</button>
+               </div>
             </div>
         </div>
    </div>
-
-   <!-- SAVED/SAVED ITEMS MODAL -->
+ 
    <div id="saved-modal" class="fixed inset-0 z-[70] hidden flex items-center justify-center p-4 modal-backdrop bg-black/80">
         <div class="glass modal-content rounded-3xl p-8 max-w-lg w-full relative max-h-[80vh] flex flex-col">
             <button onclick="document.getElementById('saved-modal').classList.add('hidden')" class="absolute top-6 right-6 p-2 rounded-full hover:bg-white/10 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
             <h2 class="heading-font text-2xl font-bold mb-2 flex items-center gap-3"><span>🔖</span> Saved & Following</h2>
             <div class="info-banner rounded-lg p-3 mb-6">
                 <p class="text-xs text-white/80">⚠️ Note: Saved items and follow history are retained for <strong>3 months</strong>.</p>
-            </div>
-
-            <!-- Tabs -->
+           </div>
+ 
             <div class="flex border-b border-white/10 mb-4">
-                <button class="flex-1 pb-2 text-sm font-semibold border-b-2 border-blue-500 text-white">Following</button>
-                <button class="flex-1 pb-2 text-sm font-semibold border-b-2 border-transparent text-white/50 hover:text-white transition-colors" onclick="alert('Saved images tab coming soon!')">Saved Images</button>
+               <button class="flex-1 pb-2 text-sm font-semibold border-b-2 border-blue-500 text-white">Following</button>
+               <button class="flex-1 pb-2 text-sm font-semibold border-b-2 border-transparent text-white/50 hover:text-white transition-colors" onclick="alert('Saved images tab coming soon!')">Saved Images</button>
             </div>
-
+ 
             <div id="following-list" class="flex-1 overflow-y-auto space-y-3 pr-2 min-h-[200px]">
-                <!-- Populated by JS -->
-                <p class="text-center text-white/40 italic py-8">You aren't following anyone yet.</p>
+               <p class="text-center text-white/40 italic py-8">You aren't following anyone yet.</p>
             </div>
         </div>
    </div>
-
-   <!-- CREATOR WORKBENCH OVERLAY (NEW) -->
+ 
    <div id="creator-workbench" class="fixed inset-0 z-[70] hidden bg-[#0f0c29] text-white flex flex-col">
        <div class="absolute inset-0 z-0 opacity-40" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);"></div>
        <header class="relative z-10 glass px-6 py-4 flex items-center justify-between shadow-xl">
            <div class="flex items-center gap-3">
                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg">
-                   <span class="text-xl font-bold">WB</span>
+                  <span class="text-xl font-bold">WB</span>
                </div>
                <div>
-                   <h2 class="heading-font text-xl font-bold text-white">Your Creator Workbench</h2>
-                   <p class="text-xs text-white/50">Draft & Publish</p>
+                  <h2 class="heading-font text-xl font-bold text-white">Your Creator Workbench</h2>
+                  <p class="text-xs text-white/50">Draft & Publish</p>
                </div>
            </div>
            <button onclick="closeWorkbench()" class="px-4 py-2 glass-dark rounded-lg hover:bg-white/10 text-white/70 hover:text-white transition-colors text-sm">Cancel</button>
        </header>
-
+ 
        <div class="relative z-10 flex-1 overflow-y-auto p-4 sm:p-8">
            <div class="max-w-4xl mx-auto glass rounded-3xl p-6 sm:p-10 shadow-2xl">
                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                   <!-- Left Col: Preview -->
-                   <div class="flex flex-col gap-4">
-                       <div class="aspect-square rounded-2xl glass-dark border-2 border-dashed border-white/20 flex items-center justify-center relative overflow-hidden group hover:border-cyan-500/50 transition-colors" id="workbench-drop-zone">
-                           <img id="workbench-preview" class="w-full h-full object-cover hidden absolute inset-0 z-10">
-                           <div class="text-center p-6 z-0">
+                  <div class="flex flex-col gap-4">
+                      <div class="aspect-square rounded-2xl glass-dark border-2 border-dashed border-white/20 flex items-center justify-center relative overflow-hidden group hover:border-cyan-500/50 transition-colors" id="workbench-drop-zone">
+                          <img id="workbench-preview" class="w-full h-full object-cover hidden absolute inset-0 z-10">
+                          <div class="text-center p-6 z-0">
                                <div class="w-16 h-16 rounded-full glass bg-white/5 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                                    <svg class="w-8 h-8 text-white/50 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                                </div>
                                <p class="text-white/70 font-medium">Click to upload image</p>
                                <p class="text-white/40 text-xs mt-1">JPG, PNG up to 10MB</p>
-                           </div>
-                           <input type="file" id="workbench-file-input" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-20">
-                       </div>
-                   </div>
-
-                   <!-- Right Col: Form -->
-                   <div class="flex flex-col gap-6 justify-center">
-                       <div>
-                           <label class="block text-sm font-medium text-white/70 mb-2">Artwork Name</label>
-                           <input type="text" id="workbench-name" placeholder="e.g. Neon Horizon" class="input-field w-full glass-dark rounded-xl px-4 py-3 text-white placeholder-white/30 outline-none focus:ring-2 focus:ring-cyan-500/50 border border-white/10">
-                       </div>
-
-                       <div>
-                           <label class="block text-sm font-medium text-white/70 mb-2">Category</label>
-                           <div class="relative">
+                          </div>
+                          <input type="file" id="workbench-file-input" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-20">
+                      </div>
+                  </div>
+ 
+                  <div class="flex flex-col gap-6 justify-center">
+                      <div>
+                          <label class="block text-sm font-medium text-white/70 mb-2">Artwork Name</label>
+                          <input type="text" id="workbench-name" placeholder="e.g. Neon Horizon" class="input-field w-full glass-dark rounded-xl px-4 py-3 text-white placeholder-white/30 outline-none focus:ring-2 focus:ring-cyan-500/50 border border-white/10">
+                      </div>
+ 
+                      <div>
+                          <label class="block text-sm font-medium text-white/70 mb-2">Category</label>
+                          <div class="relative">
                                <select id="workbench-category" class="input-field w-full glass-dark rounded-xl px-4 py-3 text-white outline-none focus:ring-2 focus:ring-cyan-500/50 border border-white/10 appearance-none cursor-pointer">
                                    <option value="" disabled selected>Select a creative style...</option>
                                    <optgroup label="Sci-Fi & Cyberpunk">
-                                       <option>Cybernetic Cities</option>
-                                       <option>Neural Networks</option>
-                                       <option>Synthwave Sunsets</option>
-                                       <option>Deep Space Exploration</option>
-                                       <option>Android Dreams</option>
-                                       <option>Quantum Flux</option>
-                                       <option>Holographic Interfaces</option>
-                                       <option>Glitch Art</option>
-                                       <option>Mecha Units</option>
-                                       <option>Binary Streams</option>
-                                   </optgroup>
+                                      <option>Cybernetic Cities</option>
+                                      <option>Neural Networks</option>
+                                      <option>Synthwave Sunsets</option>
+                                      <option>Deep Space Exploration</option>
+                                      <option>Android Dreams</option>
+                                      <option>Quantum Flux</option>
+                                      <option>Holographic Interfaces</option>
+                                      <option>Glitch Art</option>
+                                      <option>Mecha Units</option>
+                                      <option>Binary Streams</option>
+                                  </optgroup>
                                    <optgroup label="Nature & Serenity">
-                                       <option>Zen Gardens</option>
-                                       <option>Misty Mountains</option>
-                                       <option>Ethereal Forests</option>
-                                       <option>Ocean Serenity</option>
-                                       <option>Floral Fractals</option>
-                                       <option>Golden Hour</option>
-                                       <option>Celestial Bodies</option>
-                                       <option>Biophilic Design</option>
-                                       <option>Desert Solitude</option>
-                                       <option>Arctic Chill</option>
-                                   </optgroup>
+                                      <option>Zen Gardens</option>
+                                      <option>Misty Mountains</option>
+                                      <option>Ethereal Forests</option>
+                                      <option>Ocean Serenity</option>
+                                      <option>Floral Fractals</option>
+                                      <option>Golden Hour</option>
+                                      <option>Celestial Bodies</option>
+                                      <option>Biophilic Design</option>
+                                      <option>Desert Solitude</option>
+                                      <option>Arctic Chill</option>
+                                  </optgroup>
                                    <optgroup label="Artistic Styles">
-                                       <option>Lo-Fi Study Beats</option>
-                                       <option>Stylized 3D Isometric</option>
-                                       <option>Watercolor Wonders</option>
-                                       <option>Vibrant Vector Art</option>
-                                       <option>Anime Landscapes</option>
-                                       <option>Charcoal & Ink</option>
-                                       <option>Fluid Dynamics</option>
-                                       <option>Paper-Cut Layers</option>
-                                       <option>Pixel Art Retro</option>
-                                       <option>Surrealist Dreams</option>
-                                   </optgroup>
+                                      <option>Lo-Fi Study Beats</option>
+                                      <option>Stylized 3D Isometric</option>
+                                      <option>Watercolor Wonders</option>
+                                      <option>Vibrant Vector Art</option>
+                                      <option>Anime Landscapes</option>
+                                      <option>Charcoal & Ink</option>
+                                      <option>Fluid Dynamics</option>
+                                      <option>Paper-Cut Layers</option>
+                                      <option>Pixel Art Retro</option>
+                                      <option>Surrealist Dreams</option>
+                                  </optgroup>
                                    <optgroup label="Minimalist & UI">
-                                       <option>Nordic Clean</option>
-                                       <option>Monochrome Mood</option>
-                                       <option>Soft Pastels</option>
-                                       <option>Geometric Harmony</option>
-                                       <option>Negative Space</option>
-                                       <option>Architectural Lines</option>
-                                       <option>Textured Paper</option>
-                                       <option>Dark Mode Essentials</option>
-                                       <option>Typographic Quotes</option>
-                                       <option>Gradient Blurs</option>
-                                   </optgroup>
+                                      <option>Nordic Clean</option>
+                                      <option>Monochrome Mood</option>
+                                      <option>Soft Pastels</option>
+                                      <option>Geometric Harmony</option>
+                                      <option>Negative Space</option>
+                                      <option>Architectural Lines</option>
+                                      <option>Textured Paper</option>
+                                      <option>Dark Mode Essentials</option>
+                                      <option>Typographic Quotes</option>
+                                      <option>Gradient Blurs</option>
+                                  </optgroup>
                                    <optgroup label="Gaming & Fantasy">
-                                       <option>Fantasy Realms</option>
-                                       <option>Steampunk Gears</option>
-                                       <option>RPG Landscapes</option>
-                                       <option>Esports Neon</option>
-                                       <option>Vaporwave Nostalgia</option>
-                                       <option>Street Art Graffiti</option>
-                                       <option>Cosmic Horror</option>
-                                       <option>Epic Boss Battles</option>
-                                       <option>Cozy Gaming</option>
-                                       <option>Mythological Legends</option>
-                                   </optgroup>
+                                      <option>Fantasy Realms</option>
+                                      <option>Steampunk Gears</option>
+                                      <option>RPG Landscapes</option>
+                                      <option>Esports Neon</option>
+                                      <option>Vaporwave Nostalgia</option>
+                                      <option>Street Art Graffiti</option>
+                                      <option>Cosmic Horror</option>
+                                      <option>Epic Boss Battles</option>
+                                      <option>Cozy Gaming</option>
+                                      <option>Mythological Legends</option>
+                                  </optgroup>
                                </select>
                                <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/50">
                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                </div>
-                           </div>
-                       </div>
-
-                       <div class="pt-4">
-                           <button onclick="publishFromWorkbench()" id="workbench-publish-btn" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white py-3.5 rounded-xl font-bold shadow-lg shadow-cyan-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                          </div>
+                      </div>
+ 
+                      <div class="pt-4">
+                          <button onclick="publishFromWorkbench()" id="workbench-publish-btn" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white py-3.5 rounded-xl font-bold shadow-lg shadow-cyan-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
                                Publish to Gallery
-                           </button>
-                       </div>
-                   </div>
+                          </button>
+                      </div>
+                  </div>
                </div>
            </div>
        </div>
    </div>
-
-   <!-- PREMIUM STORE OVERLAY -->
+ 
    <div id="premium-store-overlay" class="fixed inset-0 z-[60] hidden bg-[#0f0c29] text-white flex flex-col overflow-y-auto">
        <div class="absolute inset-0 z-0 opacity-40" style="background: radial-gradient(circle at 50% 50%, #2d1b4e, #000);"></div>
        
        <header class="relative z-10 glass sticky top-0 px-6 py-4 flex items-center justify-between">
            <div class="flex items-center gap-3">
                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-lg animate-pulse">
-                   <span class="text-xl">👑</span>
+                  <span class="text-xl">👑</span>
                </div>
                <div>
-                   <h2 class="heading-font text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-500">Premium Store</h2>
-                   <p class="text-xs text-white/60">Exclusive One-Time Purchases</p>
+                  <h2 class="heading-font text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-500">Premium Store</h2>
+                  <p class="text-xs text-white/60">Exclusive One-Time Purchases</p>
                </div>
            </div>
            <button onclick="closePremiumStore()" class="p-2 glass-dark rounded-full hover:bg-white/10 transition-colors">
                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
            </button>
        </header>
-
+ 
        <div class="relative z-10 p-6 max-w-7xl mx-auto w-full flex-1">
            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
                
-               <!-- Item 1 -->
                <div class="glass p-6 rounded-3xl group hover:bg-white/5 transition-all relative overflow-hidden border border-yellow-500/30">
-                   <div class="absolute top-0 right-0 bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-bl-xl">LIFETIME ACCESS</div>
-                   <div class="h-48 rounded-2xl bg-gradient-to-br from-purple-900 to-black mb-6 flex items-center justify-center overflow-hidden">
-                       <span class="text-6xl group-hover:scale-110 transition-transform duration-300">♾️</span>
-                   </div>
-                   <h3 class="text-2xl font-bold mb-2">Lifetime VIP Pass</h3>
-                   <p class="text-white/60 text-sm mb-4">Get permanent access to all current and future Creator features without monthly fees.</p>
-                   <div class="flex items-center justify-between mt-auto">
-                       <div class="text-3xl font-bold text-yellow-400">$299</div>
-                       <button onclick="alert('Purchase simulation: Lifetime Pass added!')" class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 transition-all">Buy Now</button>
-                   </div>
+                  <div class="absolute top-0 right-0 bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-bl-xl">LIFETIME ACCESS</div>
+                  <div class="h-48 rounded-2xl bg-gradient-to-br from-purple-900 to-black mb-6 flex items-center justify-center overflow-hidden">
+                      <span class="text-6xl group-hover:scale-110 transition-transform duration-300">♾️</span>
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Lifetime VIP Pass</h3>
+                  <p class="text-white/60 text-sm mb-4">Get permanent access to all current and future Creator features without monthly fees.</p>
+                  <div class="flex items-center justify-between mt-auto">
+                      <div class="text-3xl font-bold text-yellow-400">$299</div>
+                      <button onclick="alert('Purchase simulation: Lifetime Pass added!')" class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 transition-all">Buy Now</button>
+                  </div>
                </div>
-
-               <!-- Item 2 -->
+ 
                <div class="glass p-6 rounded-3xl group hover:bg-white/5 transition-all relative overflow-hidden border border-cyan-500/30">
-                   <div class="h-48 rounded-2xl bg-gradient-to-br from-blue-900 to-black mb-6 flex items-center justify-center overflow-hidden">
-                       <span class="text-6xl group-hover:scale-110 transition-transform duration-300">📦</span>
-                   </div>
-                   <h3 class="text-2xl font-bold mb-2">Ultimate 3D Asset Pack</h3>
-                   <p class="text-white/60 text-sm mb-4">500+ Premium 3D models, textures, and HDRI environments for your projects.</p>
-                   <div class="flex items-center justify-between mt-auto">
-                       <div class="text-3xl font-bold text-cyan-400">$79</div>
-                       <button onclick="alert('Purchase simulation: Asset Pack added!')" class="glass-dark hover:bg-cyan-500/20 text-cyan-300 px-6 py-3 rounded-xl font-bold hover:shadow-lg border border-cyan-500/30 active:scale-95 transition-all">Add to Cart</button>
-                   </div>
+                  <div class="h-48 rounded-2xl bg-gradient-to-br from-blue-900 to-black mb-6 flex items-center justify-center overflow-hidden">
+                      <span class="text-6xl group-hover:scale-110 transition-transform duration-300">📦</span>
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Ultimate 3D Asset Pack</h3>
+                  <p class="text-white/60 text-sm mb-4">500+ Premium 3D models, textures, and HDRI environments for your projects.</p>
+                  <div class="flex items-center justify-between mt-auto">
+                      <div class="text-3xl font-bold text-cyan-400">$79</div>
+                      <button onclick="alert('Purchase simulation: Asset Pack added!')" class="glass-dark hover:bg-cyan-500/20 text-cyan-300 px-6 py-3 rounded-xl font-bold hover:shadow-lg border border-cyan-500/30 active:scale-95 transition-all">Add to Cart</button>
+                  </div>
                </div>
-
-               <!-- Item 3 -->
+ 
                <div class="glass p-6 rounded-3xl group hover:bg-white/5 transition-all relative overflow-hidden border border-pink-500/30">
-                   <div class="h-48 rounded-2xl bg-gradient-to-br from-pink-900 to-black mb-6 flex items-center justify-center overflow-hidden">
-                       <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🎓</span>
-                   </div>
-                   <h3 class="text-2xl font-bold mb-2">Masterclass Series</h3>
-                   <p class="text-white/60 text-sm mb-4">10+ hours of advanced animation tutorials from industry experts.</p>
-                   <div class="flex items-center justify-between mt-auto">
-                       <div class="text-3xl font-bold text-pink-400">$120</div>
-                       <button onclick="alert('Purchase simulation: Masterclass added!')" class="glass-dark hover:bg-pink-500/20 text-pink-300 px-6 py-3 rounded-xl font-bold hover:shadow-lg border border-pink-500/30 active:scale-95 transition-all">Add to Cart</button>
-                   </div>
+                  <div class="h-48 rounded-2xl bg-gradient-to-br from-pink-900 to-black mb-6 flex items-center justify-center overflow-hidden">
+                      <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🎓</span>
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Masterclass Series</h3>
+                  <p class="text-white/60 text-sm mb-4">10+ hours of advanced animation tutorials from industry experts.</p>
+                  <div class="flex items-center justify-between mt-auto">
+                      <div class="text-3xl font-bold text-pink-400">$120</div>
+                      <button onclick="alert('Purchase simulation: Masterclass added!')" class="glass-dark hover:bg-pink-500/20 text-pink-300 px-6 py-3 rounded-xl font-bold hover:shadow-lg border border-pink-500/30 active:scale-95 transition-all">Add to Cart</button>
+                  </div>
                </div>
-
+ 
            </div>
        </div>
    </div>
-
-   <!-- IMAGE LIGHTBOX -->
+ 
    <div id="image-lightbox" class="fixed inset-0 z-[60] hidden bg-black/90 flex items-center justify-center p-4 backdrop-blur-md opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
        <img id="lightbox-img" src="" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl transition-transform duration-300 scale-95" onclick="event.stopPropagation()">
        <button class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-2" onclick="closeLightbox()">
            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
        </button>
    </div>
-
-   <!-- Main Container -->
-   <div id="main-container" class="relative z-10 w-full min-h-full"><!-- Header -->
-    <header class="glass sticky top-0 z-40">
+ 
+   <div id="main-container" class="relative z-10 w-full min-h-full"><header class="glass sticky top-0 z-40">
      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
       <div class="flex items-center justify-between gap-4">
        <div class="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 relative">
@@ -572,8 +551,7 @@
         </div>
         <button id="nav-menu-toggle" class="heading-font font-semibold text-sm sm:text-base truncate hover:text-white/80 transition-colors flex items-center gap-1.5 min-h-[44px]"> Avanode Digitals 
          <svg id="menu-chevron" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-         </svg></button> <!-- Dropdown Menu -->
-        <div id="nav-dropdown" class="absolute top-full left-0 mt-2 glass rounded-xl shadow-2xl min-w-max hidden z-50">
+        </svg></button> <div id="nav-dropdown" class="absolute top-full left-0 mt-2 glass rounded-xl shadow-2xl min-w-max hidden z-50">
          <nav class="py-2">
           <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors first:rounded-t-xl" onclick="return handleNavLink(event, 'about')"> <span>ℹ️</span> <span>About Our Company</span> </a> 
           <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors" onclick="return handleNavLink(event, 'social')"> <span>👥</span> <span>Our Social Group</span> </a> 
@@ -583,15 +561,12 @@
              <img src="https://api.dicebear.com/9.x/bottts-neutral/svg?seed=AvanodeAI" alt="AI" class="w-full h-full object-cover">
             </div>
             <span>AI Chatbot</span> 
-          </a>
+           </a>
           <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors" onclick="return handleNavLink(event, 'premium-store')"> <span>👑</span> <span>Premium Subscription</span> </a>
           <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors last:rounded-b-xl" onclick="return handleNavLink(event, 'support')"> <span>🆘</span> <span>Customer Support</span> </a>
          </nav>
         </div>
-       </div><!-- Right Side Buttons -->
-       
-       <!-- MOVED BULK ACTIONS TOOLBAR TO HEADER -->
-       <div id="bulk-actions" class="hidden flex-1 flex justify-center items-center gap-2 animate-in fade-in slide-in-from-top-4 duration-300">
+       </div><div id="bulk-actions" class="hidden flex-1 flex justify-center items-center gap-2 animate-in fade-in slide-in-from-top-4 duration-300">
             <label class="flex items-center gap-2 cursor-pointer glass-dark px-3 py-2 rounded-lg text-sm hover:bg-white/10 select-none">
                 <input type="checkbox" id="select-all-checkbox" class="w-4 h-4 rounded border-white/30 text-blue-500 focus:ring-offset-0 focus:ring-blue-500 bg-white/10 cursor-pointer">
                 <span class="text-xs sm:text-sm font-medium">All</span>
@@ -613,14 +588,13 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
             </button>
         </div>
-
+ 
        <nav class="flex items-center justify-end gap-2 sm:gap-4 flex-shrink-0 ml-auto">
         <button id="top-subscribe-btn" onclick="handleNavLink(event, 'subscription')" class="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-white px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold shadow-lg flex items-center gap-2 min-h-[44px] transition-all hover:scale-105 active:scale-95">
          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
          <span class="hidden sm:inline">Subscription</span>
         </button>
         
-        <!-- UPDATED USER PROFILE AREA -->
         <div id="dev-panel" class="hidden relative">
             <button id="user-profile-btn" class="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-full pl-1 pr-4 py-1 border border-white/10 transition-all">
                 <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-green-400 to-blue-500 flex items-center justify-center text-sm font-bold shadow-lg">
@@ -632,8 +606,7 @@
                 </div>
                 <svg class="w-3 h-3 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-
-            <!-- PROFILE DROPDOWN MENU -->
+ 
             <div id="user-profile-menu" class="absolute top-full right-0 mt-2 w-64 glass rounded-2xl shadow-2xl p-2 hidden z-50 transform origin-top-right transition-all">
                 <div class="p-2 mb-2 border-b border-white/10">
                     <p class="text-xs text-white/50 uppercase tracking-widest font-bold">Account</p>
@@ -661,53 +634,39 @@
                 </button>
             </div>
         </div>
-
-        <button id="logout-btn" class="hidden"></button> <!-- Hidden button to keep existing logic working safely -->
-        <button id="open-login-btn" class="glass-dark px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm hover:bg-white/10 active:bg-white/20 transition-colors flex items-center gap-2 min-h-[44px]"> <span>🔐</span> <span class="hidden sm:inline">Developer Login</span> </button>
+ 
+        <button id="logout-btn" class="hidden"></button> <button id="open-login-btn" class="glass-dark px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm hover:bg-white/10 active:bg-white/20 transition-colors flex items-center gap-2 min-h-[44px]"> <span>🔐</span> <span class="hidden sm:inline">Developer Login</span> </button>
        </nav>
       </div>
      </div>
-    </header><!-- Toggle Buttons -->
-    <div id="tab-section" class="glass sticky top-16 z-30 hidden">
+    </header><div id="tab-section" class="glass sticky top-16 z-30 hidden">
      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
       <div class="flex gap-2"><button id="view-btn" class="tab-btn active glass-dark px-4 sm:px-6 py-2 rounded-lg text-sm font-medium transition-all min-h-[44px]"> 👁️ <span class="hidden sm:inline">View Site</span> </button> <button id="customize-btn" class="tab-btn glass-dark px-4 sm:px-6 py-2 rounded-lg text-sm font-medium transition-all min-h-[44px]"> ⚙️ <span class="hidden sm:inline">Customize</span> </button>
       </div>
      </div>
-    </div><!-- View Site Mode -->
-    <div id="view-mode" class="min-h-full"><!-- Hero Brand Section -->
-     <section id="profile" class="py-16 sm:py-24 px-4 sm:px-6">
+    </div><div id="view-mode" class="min-h-full"><section id="profile" class="py-16 sm:py-24 px-4 sm:px-6">
       <div class="max-w-7xl mx-auto">
-       <div class="glass rounded-3xl p-6 sm:p-12 fade-in"><!-- Company Header -->
-        <div class="text-center mb-12">
+       <div class="glass rounded-3xl p-6 sm:p-12 fade-in"><div class="text-center mb-12">
          <div class="flex items-center justify-center gap-3 mb-4">
           <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-cyan-400 to-blue-600"><span class="text-lg font-bold heading-font">AV</span>
           </div>
           <h1 class="heading-font text-2xl sm:text-3xl font-bold">Avanode Digitals</h1>
          </div>
          <p class="text-white/70 text-sm sm:text-base">Future Tech • Immersive Animation • Artificial Intelligence</p>
-        </div><!-- Center Brand Display with Icons -->
-        <div class="relative py-16 sm:py-20 px-6 sm:px-12"><!-- Left Leaf Icon -->
-         <div class="absolute left-0 top-1/2 -translate-y-1/2 text-5xl sm:text-7xl opacity-50 animate-float">
+        </div><div class="relative py-16 sm:py-20 px-6 sm:px-12"><div class="absolute left-0 top-1/2 -translate-y-1/2 text-5xl sm:text-7xl opacity-50 animate-float">
           ✨
-         </div><!-- Center Branding with 3D Mascot -->
-         <div class="text-center px-4 sm:px-12 flex flex-col items-center">
+         </div><div class="text-center px-4 sm:px-12 flex flex-col items-center">
           
-          <!-- === 3D Mascot Integration === -->
           <div id="mascot-container" class="fade-in animate-float"></div>
-          <!-- ============================= -->
-
           <div class="mb-8">
            <h2 class="heading-font text-4xl sm:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3">Avanode Studios</h2>
            <p class="heading-font text-3xl sm:text-5xl font-semibold text-white/90">Digital Animation Arts</p>
           </div>
-         </div><!-- Right Plant Icon -->
-         <div class="absolute right-0 top-1/2 -translate-y-1/2 text-5xl sm:text-7xl opacity-50 animate-float" style="animation-delay: -2s;">
+         </div><div class="absolute right-0 top-1/2 -translate-y-1/2 text-5xl sm:text-7xl opacity-50 animate-float" style="animation-delay: -2s;">
           🎨
          </div>
-        </div><!-- Skills -->
-        <div class="flex flex-wrap gap-2 justify-center mb-10 mt-12"><span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">🎨 Digital Art</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">🔮 VFX</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">⚡ Web Dev</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">🤖 AI Gen</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">🎬 Motion</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm"> UI/UX</span>
-        </div><!-- Stats -->
-        <div class="flex flex-wrap gap-6 sm:gap-8 justify-center">
+        </div><div class="flex flex-wrap gap-2 justify-center mb-10 mt-12"><span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">🎨 Digital Art</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">🔮 VFX</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">⚡ Web Dev</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">🤖 AI Gen</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm">🎬 Motion</span> <span class="skill-tag glass-dark px-4 py-2 rounded-full text-sm"> UI/UX</span>
+        </div><div class="flex flex-wrap gap-6 sm:gap-8 justify-center">
          <div class="text-center">
           <div class="heading-font text-2xl sm:text-3xl font-bold">
            50+
@@ -735,15 +694,13 @@
         </div>
        </div>
       </div>
-     </section><!-- Subscription Section -->
-     <section id="subscription" class="py-12 px-4 sm:px-6">
+     </section><section id="subscription" class="py-12 px-4 sm:px-6">
       <div class="max-w-7xl mx-auto">
        <div class="text-center mb-12">
         <h2 class="heading-font text-3xl sm:text-4xl font-bold mb-4">Choose Your Plan</h2>
         <p class="text-white/60">Unlock the full potential of Avanode Digitals with our premium tiers.</p>
        </div>
        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <!-- Free Plan -->
         <div class="glass p-8 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all">
          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
           <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.516L20.297 19H3.703L12 5.516z"/></svg>
@@ -757,7 +714,6 @@
          </ul>
          <button onclick="upgradeTier('free')" class="w-full glass-dark py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors">Current Plan</button>
         </div>
-        <!-- Pro Plan -->
         <div class="glass p-8 rounded-3xl relative overflow-hidden ring-2 ring-purple-500 bg-purple-500/10 transform scale-105 shadow-2xl">
          <div class="absolute top-0 right-0 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">POPULAR</div>
          <h3 class="text-xl font-bold mb-2">Creator</h3>
@@ -773,48 +729,39 @@
        </div>
       </div>
      </section>
-     <!-- Gallery Section -->
      <section id="gallery" class="py-12 px-4 sm:px-6">
-      <div class="max-w-7xl mx-auto"><!-- Gallery Header -->
-       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+      <div class="max-w-7xl mx-auto"><div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
         <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
          <h2 class="heading-font text-2xl sm:text-3xl font-bold" id="gallery-title">🖼️ Multimedia Gallery</h2>
          
-         <!-- Select All Toggle (NEW) -->
          <button id="gallery-select-all-btn" onclick="toggleSelectAll()" class="glass-dark px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 active:bg-white/20 transition-colors flex items-center gap-2" title="Select All Visible">
-            <div id="gallery-select-all-icon" class="w-4 h-4 rounded border border-white/40 flex items-center justify-center"></div>
-            <span class="hidden sm:inline text-sm">Select All</span>
-         </button>
-
-         <!-- Upload Button (Modified to trigger check) -->
+             <div id="gallery-select-all-icon" class="w-4 h-4 rounded border border-white/40 flex items-center justify-center"></div>
+             <span class="hidden sm:inline text-sm">Select All</span>
+        </button>
+ 
          <button onclick="handleUploadClick()" class="glass-dark px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 active:bg-white/20 transition-colors flex items-center gap-2" title="Quick Upload">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
           <span class="hidden sm:inline text-sm">Upload</span>
          </button>
-
-         <!-- Clear All Button -->
+ 
          <button id="clear-all-btn" onclick="clearAllImages()" class="glass-dark px-3 py-2 rounded-lg text-sm font-medium hover:bg-red-500/20 text-red-300 transition-colors flex items-center gap-2" title="Delete All Images">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-            <span class="hidden sm:inline">Clear All</span>
+             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+             <span class="hidden sm:inline">Clear All</span>
          </button>
-
-        </div><!-- Search Bar -->
-        <div class="relative w-full sm:w-80"><input type="text" id="search-input" placeholder="Search images by name..." class="search-input w-full glass-dark rounded-xl px-5 py-3 pl-12 text-white placeholder-white/40 outline-none">
+ 
+        </div><div class="relative w-full sm:w-80"><input type="text" id="search-input" placeholder="Search images by name..." class="search-input w-full glass-dark rounded-xl px-5 py-3 pl-12 text-white placeholder-white/40 outline-none">
          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
          </svg>
         </div>
-       </div><!-- Gallery Grid -->
-       <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
-       </div><!-- Empty State -->
-       <div id="empty-state" class="glass rounded-2xl p-12 text-center hidden">
+       </div><div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+       </div><div id="empty-state" class="glass rounded-2xl p-12 text-center hidden">
         <div class="w-24 h-24 rounded-full glass-dark flex items-center justify-center mx-auto mb-6">
          <svg class="w-12 h-12 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
          </svg>
         </div>
         <h3 class="heading-font text-xl font-semibold mb-2">No images found</h3>
         <p class="text-white/50">Upload your first image to start building your gallery!</p>
-       </div><!-- Pagination -->
-       <div id="pagination" class="flex items-center justify-center gap-2 hidden"><button id="prev-btn" class="pagination-btn glass-dark w-10 h-10 rounded-xl flex items-center justify-center min-h-[44px] min-w-[44px]">
+       </div><div id="pagination" class="flex items-center justify-center gap-2 hidden"><button id="prev-btn" class="pagination-btn glass-dark w-10 h-10 rounded-xl flex items-center justify-center min-h-[44px] min-w-[44px]">
          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
          </svg></button>
         <div id="page-numbers" class="flex gap-1"></div><button id="next-btn" class="pagination-btn glass-dark w-10 h-10 rounded-xl flex items-center justify-center min-h-[44px] min-w-[44px]">
@@ -824,7 +771,6 @@
       </div>
      </section>
      
-     <!-- Contact Section -->
      <section id="contact" class="py-12 px-4 sm:px-6">
       <div class="max-w-3xl mx-auto">
        <div class="glass rounded-3xl p-6 sm:p-10 text-center">
@@ -840,76 +786,74 @@
        </div>
       </div>
      </section>
-
-     <!-- About Our Company Section -->
+ 
      <section id="about" class="py-16 px-4 sm:px-6 relative">
          <div class="absolute top-0 right-0 p-12 opacity-30 pointer-events-none">
              <div class="w-64 h-64 bg-cyan-500 rounded-full filter blur-[100px]"></div>
          </div>
          <div class="max-w-7xl mx-auto glass rounded-3xl p-8 sm:p-12">
              <div class="flex flex-col md:flex-row gap-12 items-center">
-                 <div class="md:w-1/2">
-                     <h2 class="heading-font text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-200">About Avanode</h2>
-                     <p class="text-white/70 mb-4 leading-relaxed">
-                         Founded in 2026 by Rohit Phogat, <strong>Avanode Digitals</strong> stands at the intersection of artistic expression and technological innovation. We are not just a digital art studio; we are a hub for the next generation of immersive experiences.
-                     </p>
-                     <p class="text-white/70 mb-6 leading-relaxed">
-                         Our mission is to democratize high-end digital animation and 3D design, providing creators with the tools and inspiration they need to build worlds that don't yet exist. From sustainable tech integration to AI-driven creativity, we are shaping the future of digital art.
-                     </p>
-                     <div class="flex gap-4">
-                         <div class="glass-dark p-4 rounded-xl text-center flex-1">
-                             <div class="text-2xl mb-1">🚀</div>
-                             <div class="text-sm font-bold text-cyan-400">Innovation</div>
-                         </div>
-                         <div class="glass-dark p-4 rounded-xl text-center flex-1">
-                             <div class="text-2xl mb-1">🌱</div>
-                             <div class="text-sm font-bold text-green-400">Sustainability</div>
-                         </div>
-                         <div class="glass-dark p-4 rounded-xl text-center flex-1">
-                             <div class="text-2xl mb-1">🎨</div>
-                             <div class="text-sm font-bold text-purple-400">Creativity</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="md:w-1/2 relative">
-                     <div class="aspect-video rounded-2xl bg-gradient-to-br from-cyan-900/40 to-purple-900/40 border border-white/10 flex items-center justify-center overflow-hidden">
-                         <img src="https://raw.githubusercontent.com/RohitPhogat222/Avanode.index.html/main/Gemini_Generated_Image_soub2ssoub2ssoub.png" alt="Avanode Character" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                     </div>
-                 </div>
-             </div>
+                <div class="md:w-1/2">
+                    <h2 class="heading-font text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-200">About Avanode</h2>
+                    <p class="text-white/70 mb-4 leading-relaxed">
+                        Founded in 2026 by Rohit Phogat, <strong>Avanode Digitals</strong> stands at the intersection of artistic expression and technological innovation. We are not just a digital art studio; we are a hub for the next generation of immersive experiences.
+                    </p>
+                    <p class="text-white/70 mb-6 leading-relaxed">
+                        Our mission is to democratize high-end digital animation and 3D design, providing creators with the tools and inspiration they need to build worlds that don't yet exist. From sustainable tech integration to AI-driven creativity, we are shaping the future of digital art.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="glass-dark p-4 rounded-xl text-center flex-1">
+                            <div class="text-2xl mb-1">🚀</div>
+                            <div class="text-sm font-bold text-cyan-400">Innovation</div>
+                        </div>
+                        <div class="glass-dark p-4 rounded-xl text-center flex-1">
+                            <div class="text-2xl mb-1">🌱</div>
+                            <div class="text-sm font-bold text-green-400">Sustainability</div>
+                        </div>
+                        <div class="glass-dark p-4 rounded-xl text-center flex-1">
+                            <div class="text-2xl mb-1">🎨</div>
+                            <div class="text-sm font-bold text-purple-400">Creativity</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="aspect-video rounded-2xl bg-gradient-to-br from-cyan-900/40 to-purple-900/40 border border-white/10 flex items-center justify-center overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/RohitPhogat222/Avanode.index.html/main/Gemini_Generated_Image_soub2ssoub2ssoub.png" alt="Avanode Character" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
          </div>
      </section>
-
-     <!-- Customer Support Section -->
+ 
      <section id="support" class="py-12 px-4 sm:px-6">
         <div class="max-w-4xl mx-auto glass rounded-3xl p-8 text-center">
             <h2 class="heading-font text-3xl font-bold mb-4">Customer Support Center</h2>
             <p class="text-white/60 mb-8">Experiencing issues with your subscription or gallery uploads? Our dedicated team is here to help.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <button class="glass-dark p-6 rounded-xl hover:bg-white/10 transition-colors group">
-                    <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🎫</div>
-                    <h3 class="font-bold mb-1">Submit Ticket</h3>
-                    <p class="text-xs text-white/50">Response within 24h</p>
-                </button>
-                <button class="glass-dark p-6 rounded-xl hover:bg-white/10 transition-colors group">
-                    <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">💬</div>
-                    <h3 class="font-bold mb-1">Live Chat</h3>
-                    <p class="text-xs text-white/50">Available 9am - 5pm</p>
-                </button>
-                <button class="glass-dark p-6 rounded-xl hover:bg-white/10 transition-colors group">
-                    <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">📚</div>
-                    <h3 class="font-bold mb-1">Knowledge Base</h3>
-                    <p class="text-xs text-white/50">Tutorials & FAQs</p>
-                </button>
-            </div>
+               <button class="glass-dark p-6 rounded-xl hover:bg-white/10 transition-colors group">
+                   <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🎫</div>
+                   <h3 class="font-bold mb-1">Submit Ticket</h3>
+                   <p class="text-xs text-white/50">Response within 24h</p>
+               </button>
+               <button class="glass-dark p-6 rounded-xl hover:bg-white/10 transition-colors group">
+                   <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">💬</div>
+                   <h3 class="font-bold mb-1">Live Chat</h3>
+                   <p class="text-xs text-white/50">Available 9am - 5pm</p>
+               </button>
+               <button class="glass-dark p-6 rounded-xl hover:bg-white/10 transition-colors group">
+                   <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">📚</div>
+                   <h3 class="font-bold mb-1">Knowledge Base</h3>
+                   <p class="text-xs text-white/50">Tutorials & FAQs</p>
+               </button>
+           </div>
             
             <div class="mt-8 pt-6 border-t border-white/10">
                 <p class="text-sm text-white/40">Direct Hotline: <span class="text-white font-bold">+91 70151 23151</span></p>
-            </div>
+           </div>
         </div>
      </section>
-
+ 
      <footer id="main-footer" class="glass mt-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -943,22 +887,18 @@
             <p class="text-white/40 text-sm flex items-center gap-2">Empowering <span class="text-cyan-400">🎨</span> with digital innovation</p>
             <p id="support-phone" class="text-purple-400 text-lg font-bold mt-1 transition-all duration-300">Support: +91 70151 23151</p>
         </div>
-       </div><!-- Users Online Indicator -->
-       <div class="online-bar">
+       </div><div class="online-bar">
         <div class="online-indicator"><span class="online-dot"></span> <span class="online-text"> <span class="online-count">127</span> people online </span>
         </div>
        </div>
       </div>
      </footer>
-    </div><!-- Customize Mode -->
-    <div id="customize-mode" class="min-h-full hidden"><!-- Success Toast -->
-     <div id="success-toast" class="fixed top-20 right-4 glass rounded-lg px-6 py-4 flex items-center gap-3 hidden z-50 success-toast">
+    </div><div id="customize-mode" class="min-h-full hidden"><div id="success-toast" class="fixed top-20 right-4 glass rounded-lg px-6 py-4 flex items-center gap-3 hidden z-50 success-toast">
       <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
       </svg><span id="toast-message">Settings saved!</span>
      </div>
      <section class="py-12 px-4 sm:px-6">
-      <div class="max-w-4xl mx-auto"><!-- Profile Customization -->
-       <div class="glass rounded-3xl p-6 sm:p-10 mb-6">
+      <div class="max-w-4xl mx-auto"><div class="glass rounded-3xl p-6 sm:p-10 mb-6">
         <h2 class="heading-font text-2xl font-bold mb-6 flex items-center gap-3"><span>👤</span> Profile Information</h2>
         <div class="space-y-6">
          <div><label class="block text-sm font-medium mb-2">Your Name</label> <input type="text" id="customize-name" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" placeholder="Enter your full name">
@@ -968,33 +908,29 @@
          <div><label class="block text-sm font-medium mb-2">Bio</label> <textarea id="customize-bio" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none resize-none" placeholder="Tell us about yourself..." rows="4"></textarea>
          </div>
         </div>
-       </div><!-- Gallery Customization -->
-       <div class="glass rounded-3xl p-6 sm:p-10 mb-6">
+       </div><div class="glass rounded-3xl p-6 sm:p-10 mb-6">
         <h2 class="heading-font text-2xl font-bold mb-6 flex items-center gap-3"><span>🖼️</span> Gallery Settings</h2>
         <div class="space-y-6">
          <div><label class="block text-sm font-medium mb-2">Gallery Title</label> <input type="text" id="customize-gallery-title" class="input-field w-full glass-dark rounded-lg px-4 py-3 text-white placeholder-white/40 outline-none" placeholder="e.g., 🖼️ Multimedia Gallery">
-         </div><!-- Upload Zone for Gallery -->
-         <div><label class="block text-sm font-medium mb-4">Upload Images</label> <label class="upload-zone rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer block"> <input type="file" id="file-input" accept="image/*" multiple class="hidden">
+         </div><div><label class="block text-sm font-medium mb-4">Upload Images</label> <label class="upload-zone rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer block"> <input type="file" id="file-input" accept="image/*" multiple class="hidden">
            <div class="w-16 h-16 rounded-full glass-dark flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
            </div><p class="text-white/70 text-center"><span class="text-white font-medium">Click to upload</span> or drag and drop</p><p class="text-white/40 text-sm mt-1">PNG, JPG, GIF up to 10MB</p></label>
-         </div><!-- Gallery Preview -->
-         <div id="gallery-preview" class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6 hidden">
+         </div><div id="gallery-preview" class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6 hidden">
          </div>
          <div id="gallery-stats" class="glass-dark rounded-lg p-4 text-center">
           <p class="text-sm text-white/70">Total Images: <span class="font-bold text-white" id="preview-count">0</span></p>
          </div>
         </div>
-       </div><!-- Save Button -->
-       <div class="flex flex-col sm:flex-row gap-4 mb-20"><button id="save-customize-btn" class="flex-1 glass px-6 py-3 rounded-lg font-semibold hover:bg-white/15 active:bg-white/20 transition-all flex items-center justify-center gap-2 min-h-[44px]"> <span>💾</span> <span>Save All Changes</span> </button> <button id="clear-gallery-btn" class="glass-dark px-6 py-3 rounded-lg font-semibold hover:bg-red-500/20 transition-all flex items-center gap-2 min-h-[44px]"> <span>🗑️</span> <span>Clear All</span> </button>
+       </div><div class="flex flex-col sm:flex-row gap-4 mb-20"><button id="save-customize-btn" class="flex-1 glass px-6 py-3 rounded-lg font-semibold hover:bg-white/15 active:bg-white/20 transition-all flex items-center justify-center gap-2 min-h-[44px]"> <span>💾</span> <span>Save All Changes</span> </button> <button id="clear-gallery-btn" class="glass-dark px-6 py-3 rounded-lg font-semibold hover:bg-red-500/20 transition-all flex items-center gap-2 min-h-[44px]"> <span>🗑️</span> <span>Clear All</span> </button>
        </div>
       </div>
      </section>
     </div>
    </div>
   </div>
-
+ 
   <script>
     // ==================== GLOBAL HELPERS ====================
     function clearErrors() {
@@ -1003,7 +939,7 @@
         el.textContent = '';
       });
     }
-
+ 
     function showSection(sectionId) {
         ['login-section', 'register-step-1', 'register-step-2', 'register-step-3', 
          'reset-step-1', 'reset-step-2', 'reset-step-3'].forEach(id => {
@@ -1014,7 +950,7 @@
         if(target) target.classList.remove('hidden');
         clearErrors();
     }
-
+ 
     function showError(elementId, message) {
       const errorEl = document.getElementById(elementId);
       if (errorEl) {
@@ -1022,7 +958,7 @@
         errorEl.classList.remove('hidden');
       }
     }
-
+ 
     function simplePasswordHash(password) {
       let hash = 0;
       for (let i = 0; i < password.length; i++) {
@@ -1032,7 +968,7 @@
       }
       return 'hash_' + Math.abs(hash).toString(36);
     }
-
+ 
     // ==================== STATE MANAGEMENT ====================
     let allProfiles = {};
     let tempRegistrationData = {};
@@ -1048,16 +984,16 @@
     let isLoggedIn = false;
     let isDropdownOpen = false;
     let isProfileMenuOpen = false; // New state
-    
+     
     // NEW: Subscription State
     let userTier = 'free'; // 'free', 'creator'
     let followedUsers = new Set(); // Stores IDs of followed users
     let viewHistory = []; // Stores viewing history
     let historyEnabled = true;
-    
+     
     // NEW: Workbench state
     let workbenchImage = null;
-
+ 
     // ==================== DATA SDK ====================
     window.dataSdk = {
         init: async (handler) => {
@@ -1079,14 +1015,14 @@
             return { isOk: true };
         }
     };
-
+ 
     // ==================== INITIALIZATION ====================
     document.addEventListener('DOMContentLoaded', () => {
       (async () => {
         await window.dataSdk.init({
           onDataChanged: (data) => {
               if (data && Array.isArray(data)) {
-                  data.forEach(profile => allProfiles[profile.username] = profile);
+                 data.forEach(profile => allProfiles[profile.username] = profile);
               }
           }
         });
@@ -1098,7 +1034,7 @@
             { id: 'auth3', name: 'PixelArt', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Pixel' },
             { id: 'auth4', name: 'VibeCheck', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Vibe' }
         ];
-
+ 
         const sampleImages = [
             { name: 'Neon City', src: 'https://images.unsplash.com/photo-1580477667995-2b94f01c9516?auto=format&fit=crop&w=600&q=80' },
             { name: 'Cyber Punk', src: 'https://images.unsplash.com/photo-1625834317364-b32c32e12079?auto=format&fit=crop&w=600&q=80' },
@@ -1121,12 +1057,12 @@
             likes: Math.floor(Math.random() * 100) + 10,
             isLiked: false
         }));
-
+ 
         // Initial render
         renderGallery();
         updateSubscriptionUI();
       })();
-
+ 
       // Event Listeners for Elements that might be null if not waited for
       const workbenchFileInput = document.getElementById('workbench-file-input');
       const searchInput = document.getElementById('search-input');
@@ -1135,7 +1071,7 @@
       const selectAllCheckbox = document.getElementById('select-all-checkbox');
       const downloadSelectedBtn = document.getElementById('download-selected-btn');
       const deleteSelectedBtn = document.getElementById('delete-selected-btn');
-
+ 
       if(workbenchFileInput) workbenchFileInput.addEventListener('change', handleWorkbenchFileSelect);
       if(searchInput) searchInput.addEventListener('input', (e) => { searchQuery = e.target.value.toLowerCase(); currentPage = 1; renderGallery(); });
       
@@ -1144,7 +1080,7 @@
           const totalPages = Math.ceil(getFilteredImages().length / imagesPerPage);
           if (currentPage < totalPages) goToPage(currentPage + 1); 
       });
-
+ 
       if(selectAllCheckbox) {
           selectAllCheckbox.addEventListener('change', (e) => {
               const visibleImages = getFilteredImages();
@@ -1153,7 +1089,7 @@
               renderGallery(); updateBulkUI();
           });
       }
-
+ 
       if(downloadSelectedBtn) {
           downloadSelectedBtn.addEventListener('click', () => {
               if (selectedImageIds.size === 0) return;
@@ -1166,7 +1102,7 @@
               });
           });
       }
-
+ 
       if(deleteSelectedBtn) {
           deleteSelectedBtn.addEventListener('click', () => {
               if (selectedImageIds.size === 0) return;
@@ -1177,7 +1113,7 @@
           });
       }
     });
-
+ 
     // ==================== SUBSCRIPTION LOGIC ====================
     window.upgradeTier = function(tier) {
         // ENFORCE LOGIN BEFORE PURCHASE
@@ -1187,8 +1123,8 @@
             const msg = document.getElementById('toast-message');
             if(msg) msg.textContent = "Please Login to Purchase Subscription!";
             if(toast) {
-                toast.classList.remove('hidden');
-                setTimeout(() => toast.classList.add('hidden'), 3000);
+               toast.classList.remove('hidden');
+               setTimeout(() => toast.classList.add('hidden'), 3000);
             }
             
             // 2. Open Login Modal
@@ -1198,7 +1134,7 @@
             
             return; // Stop execution
         }
-
+ 
         if(tier === userTier) return;
         
         userTier = tier;
@@ -1209,35 +1145,34 @@
         
         if(msg) msg.textContent = `Welcome to the ${tier.charAt(0).toUpperCase() + tier.slice(1)} Plan!`;
         if(toast) {
-            toast.classList.remove('hidden');
-            setTimeout(() => toast.classList.add('hidden'), 3000);
+           toast.classList.remove('hidden');
+           setTimeout(() => toast.classList.add('hidden'), 3000);
         }
-
+ 
         // Re-render components to reflect new state
         renderGallery();
         updateSubscriptionUI();
         
         // If unlocking creator tools, open workbench
         if(tier !== 'free') {
-              setTimeout(() => {
-                  // Open workbench automatically after upgrade for immediate gratification/onboarding
-                  const workbench = document.getElementById('creator-workbench');
-                  if(workbench) workbench.classList.remove('hidden');
-              }, 1500); // slight delay after toast
+             setTimeout(() => {
+                 // Open workbench automatically after upgrade for immediate gratification/onboarding
+                 const workbench = document.getElementById('creator-workbench');
+                 if(workbench) workbench.classList.remove('hidden');
+             }, 1500); // slight delay after toast
         }
         
         // Update Modal UI if open
         const modalPlan = document.getElementById('modal-plan-name');
         if(modalPlan) modalPlan.textContent = tier === 'free' ? 'Explorer Tier' : 'Creator Tier';
     };
-
+ 
     function updateSubscriptionUI() {
         const subSection = document.querySelector('#subscription .grid');
         if(!subSection) return;
-
+ 
         // Re-generate the grid HTML based on userTier (ONLY EXPLORER AND CREATOR)
         subSection.innerHTML = `
-        <!-- Free Plan -->
         <div class="glass p-8 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all ${userTier === 'free' ? 'ring-2 ring-green-500 bg-green-500/10' : 'opacity-80'}">
          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
           <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.516L20.297 19H3.703L12 5.516z"/></svg>
@@ -1253,8 +1188,7 @@
             ${userTier === 'free' ? 'Current Plan' : 'Downgrade'}
          </button>
         </div>
-
-        <!-- Pro Plan -->
+ 
         <div class="glass p-8 rounded-3xl relative overflow-hidden transition-all shadow-2xl ${userTier === 'creator' ? 'ring-2 ring-purple-500 bg-purple-500/10' : 'transform hover:scale-105'}">
          <div class="absolute top-0 right-0 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">POPULAR</div>
          <h3 class="text-xl font-bold mb-2">Creator</h3>
@@ -1271,7 +1205,7 @@
         </div>
         `;
     }
-
+ 
     // ==================== DOM ELEMENTS & EVENT LISTENERS ====================
     const loginModal = document.getElementById('login-modal');
     const openLoginBtn = document.getElementById('open-login-btn');
@@ -1285,338 +1219,338 @@
     const resetForm1 = document.getElementById('reset-form-1');
     const resetForm2 = document.getElementById('reset-form-2');
     const resetForm3 = document.getElementById('reset-form-3');
-
+ 
     if (openLoginBtn) openLoginBtn.addEventListener('click', () => { loginModal.classList.remove('hidden'); showSection('login-section'); });
     if (closeModalBtn) closeModalBtn.addEventListener('click', () => { loginModal.classList.add('hidden'); });
     if (getRegisteredBtn) getRegisteredBtn.addEventListener('click', () => { showSection('register-step-1'); });
     if (forgotPasswordBtn) forgotPasswordBtn.addEventListener('click', () => { showSection('reset-step-1'); });
-
+ 
     document.querySelectorAll('.back-to-login').forEach(btn => {
-        btn.addEventListener('click', (e) => { e.preventDefault(); showSection('login-section'); });
+       btn.addEventListener('click', (e) => { e.preventDefault(); showSection('login-section'); });
     });
-
+ 
     // ==================== REGISTRATION LOGIC ====================
     regForm1.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const username = document.getElementById('reg-username').value.trim();
-        const contact = document.getElementById('reg-contact').value.trim();
-        if (allProfiles[username]) { showError('reg-error-1', 'Username already exists!'); return; }
-        currentOtp = Math.floor(100000 + Math.random() * 900000).toString();
-        tempRegistrationData = { username, contact };
-        alert(`AVANODE OTP: ${currentOtp}\n(In a real app, this is sent to ${contact})`);
-        showSection('register-step-2');
+       e.preventDefault();
+       const username = document.getElementById('reg-username').value.trim();
+       const contact = document.getElementById('reg-contact').value.trim();
+       if (allProfiles[username]) { showError('reg-error-1', 'Username already exists!'); return; }
+       currentOtp = Math.floor(100000 + Math.random() * 900000).toString();
+       tempRegistrationData = { username, contact };
+       alert(`AVANODE OTP: ${currentOtp}\n(In a real app, this is sent to ${contact})`);
+       showSection('register-step-2');
     });
-
+ 
     regForm2.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const enteredOtp = document.getElementById('reg-otp').value.trim();
-        if (enteredOtp !== currentOtp) { showError('reg-error-2', 'Invalid OTP. Please try again.'); return; }
-        showSection('register-step-3');
+       e.preventDefault();
+       const enteredOtp = document.getElementById('reg-otp').value.trim();
+       if (enteredOtp !== currentOtp) { showError('reg-error-2', 'Invalid OTP. Please try again.'); return; }
+       showSection('register-step-3');
     });
-
+ 
     regForm3.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const pass = document.getElementById('reg-pass').value.trim();
-        const confirmPass = document.getElementById('reg-confirm-pass').value.trim();
-        if (pass !== confirmPass) { showError('reg-error-3', 'Passwords do not match!'); return; }
-        const newProfile = {
-            username: tempRegistrationData.username,
-            password_hash: simplePasswordHash(pass),
-            email: tempRegistrationData.contact,
-            profile_name: 'New Developer',
-            profile_title: 'Developer',
-            profile_bio: 'New member of the Avanode community.',
-            gallery_title: 'My Gallery',
-            created_at: new Date().toISOString()
-        };
-        const result = await window.dataSdk.create(newProfile);
-        if (result.isOk) {
-            allProfiles[newProfile.username] = newProfile;
-            alert('Registration Successful! Please login.');
-            showSection('login-section');
-            document.getElementById('username-input').value = newProfile.username;
-        }
+       e.preventDefault();
+       const pass = document.getElementById('reg-pass').value.trim();
+       const confirmPass = document.getElementById('reg-confirm-pass').value.trim();
+       if (pass !== confirmPass) { showError('reg-error-3', 'Passwords do not match!'); return; }
+       const newProfile = {
+           username: tempRegistrationData.username,
+           password_hash: simplePasswordHash(pass),
+           email: tempRegistrationData.contact,
+           profile_name: 'New Developer',
+           profile_title: 'Developer',
+           profile_bio: 'New member of the Avanode community.',
+           gallery_title: 'My Gallery',
+           created_at: new Date().toISOString()
+       };
+       const result = await window.dataSdk.create(newProfile);
+       if (result.isOk) {
+           allProfiles[newProfile.username] = newProfile;
+           alert('Registration Successful! Please login.');
+           showSection('login-section');
+           document.getElementById('username-input').value = newProfile.username;
+       }
     });
-
+ 
     // ==================== PASSWORD RESET LOGIC ====================
     resetForm1.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const contact = document.getElementById('reset-contact').value.trim();
-        const userExists = Object.values(allProfiles).find(p => p.email === contact);
-        if (!userExists) { showError('reset-error-1', 'Email/Phone not found in our records.'); return; }
-        tempResetContact = contact;
-        currentOtp = Math.floor(100000 + Math.random() * 900000).toString();
-        alert(`AVANODE RESET OTP: ${currentOtp}`);
-        showSection('reset-step-2');
+       e.preventDefault();
+       const contact = document.getElementById('reset-contact').value.trim();
+       const userExists = Object.values(allProfiles).find(p => p.email === contact);
+       if (!userExists) { showError('reset-error-1', 'Email/Phone not found in our records.'); return; }
+       tempResetContact = contact;
+       currentOtp = Math.floor(100000 + Math.random() * 900000).toString();
+       alert(`AVANODE RESET OTP: ${currentOtp}`);
+       showSection('reset-step-2');
     });
-
+ 
     resetForm2.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const enteredOtp = document.getElementById('reset-otp').value.trim();
-        if (enteredOtp !== currentOtp) { showError('reset-error-2', 'Invalid OTP.'); return; }
-        showSection('reset-step-3');
+       e.preventDefault();
+       const enteredOtp = document.getElementById('reset-otp').value.trim();
+       if (enteredOtp !== currentOtp) { showError('reset-error-2', 'Invalid OTP.'); return; }
+       showSection('reset-step-3');
     });
-
+ 
     resetForm3.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const pass = document.getElementById('reset-pass').value.trim();
-        const confirmPass = document.getElementById('reset-confirm-pass').value.trim();
-        if (pass !== confirmPass) { showError('reset-error-3', 'Passwords do not match!'); return; }
-        const profile = Object.values(allProfiles).find(p => p.email === tempResetContact);
-        if (profile) {
-            const updatedProfile = { ...profile, password_hash: simplePasswordHash(pass) };
-            const result = await window.dataSdk.update(updatedProfile);
-            if (result.isOk) {
-                allProfiles[profile.username] = updatedProfile;
-                alert('Password reset successful! Please login.');
-                showSection('login-section');
-            }
-        }
+       e.preventDefault();
+       const pass = document.getElementById('reset-pass').value.trim();
+       const confirmPass = document.getElementById('reset-confirm-pass').value.trim();
+       if (pass !== confirmPass) { showError('reset-error-3', 'Passwords do not match!'); return; }
+       const profile = Object.values(allProfiles).find(p => p.email === tempResetContact);
+       if (profile) {
+           const updatedProfile = { ...profile, password_hash: simplePasswordHash(pass) };
+           const result = await window.dataSdk.update(updatedProfile);
+           if (result.isOk) {
+               allProfiles[profile.username] = updatedProfile;
+               alert('Password reset successful! Please login.');
+               showSection('login-section');
+           }
+       }
     });
-
+ 
     // ==================== LOGIN/LOGOUT LOGIC ====================
     loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const username = document.getElementById('username-input').value.trim();
-        const password = document.getElementById('password-input').value.trim();
-
-        // --- SUPERUSER BACKDOOR ---
-        if (username === 'Rohit' && password === '1234567890') {
-            currentUsername = 'Rohit';
-            // Create a mock profile on the fly if not registered
-            currentProfile = allProfiles['Rohit'] || {
-                username: 'Rohit',
-                profile_name: 'Rohit Phogat',
-                profile_title: 'System Administrator',
-                profile_bio: 'Owner & Lead Developer',
-                created_at: new Date().toISOString()
-            };
-            
-            isLoggedIn = true;
-            userTier = 'creator'; // Grant "Full Access" / Creator Tier immediately
-            
-            // Update UI Elements
-            document.getElementById('dev-username-display').textContent = 'Rohit';
-            document.getElementById('user-avatar-initial').textContent = 'R';
-            document.getElementById('open-login-btn').classList.add('hidden');
-            document.getElementById('dev-panel').classList.remove('hidden');
-            document.getElementById('tab-section').classList.remove('hidden');
-            loginModal.classList.add('hidden');
-            
-            // Welcome Toast
-            const toast = document.getElementById('success-toast');
-            const msg = document.getElementById('toast-message');
-            if(msg) msg.textContent = "Welcome Owner! Full Access Granted 🔓";
-            if(toast) {
-                toast.classList.remove('hidden');
-                setTimeout(() => toast.classList.add('hidden'), 3000);
-            }
-
-            initializeGallery();
-            updateSubscriptionUI(); // Updates UI to show Pro/Creator features
-            return;
-        }
-        // ---------------------------
-
-        if (allProfiles[username] && allProfiles[username].password_hash === simplePasswordHash(password)) {
-            currentUsername = username;
-            currentProfile = allProfiles[username];
-            isLoggedIn = true;
-            document.getElementById('dev-username-display').textContent = username;
-            document.getElementById('user-avatar-initial').textContent = username.charAt(0).toUpperCase(); // NEW
-            document.getElementById('open-login-btn').classList.add('hidden');
-            document.getElementById('dev-panel').classList.remove('hidden');
-            document.getElementById('tab-section').classList.remove('hidden');
-            loginModal.classList.add('hidden');
-            initializeGallery();
-            updateSubscriptionUI();
-        } else {
-            showError('password-error', 'Invalid username or password');
-        }
+       e.preventDefault();
+       const username = document.getElementById('username-input').value.trim();
+       const password = document.getElementById('password-input').value.trim();
+ 
+       // --- SUPERUSER BACKDOOR ---
+       if (username === 'Rohit' && password === '1234567890') {
+           currentUsername = 'Rohit';
+           // Create a mock profile on the fly if not registered
+           currentProfile = allProfiles['Rohit'] || {
+               username: 'Rohit',
+               profile_name: 'Rohit Phogat',
+               profile_title: 'System Administrator',
+               profile_bio: 'Owner & Lead Developer',
+               created_at: new Date().toISOString()
+           };
+           
+           isLoggedIn = true;
+           userTier = 'creator'; // Grant "Full Access" / Creator Tier immediately
+           
+           // Update UI Elements
+           document.getElementById('dev-username-display').textContent = 'Rohit';
+           document.getElementById('user-avatar-initial').textContent = 'R';
+           document.getElementById('open-login-btn').classList.add('hidden');
+           document.getElementById('dev-panel').classList.remove('hidden');
+           document.getElementById('tab-section').classList.remove('hidden');
+           loginModal.classList.add('hidden');
+           
+           // Welcome Toast
+           const toast = document.getElementById('success-toast');
+           const msg = document.getElementById('toast-message');
+           if(msg) msg.textContent = "Welcome Owner! Full Access Granted 🔓";
+           if(toast) {
+               toast.classList.remove('hidden');
+               setTimeout(() => toast.classList.add('hidden'), 3000);
+           }
+ 
+           initializeGallery();
+           updateSubscriptionUI(); // Updates UI to show Pro/Creator features
+           return;
+       }
+       // ---------------------------
+ 
+       if (allProfiles[username] && allProfiles[username].password_hash === simplePasswordHash(password)) {
+           currentUsername = username;
+           currentProfile = allProfiles[username];
+           isLoggedIn = true;
+           document.getElementById('dev-username-display').textContent = username;
+           document.getElementById('user-avatar-initial').textContent = username.charAt(0).toUpperCase(); // NEW
+           document.getElementById('open-login-btn').classList.add('hidden');
+           document.getElementById('dev-panel').classList.remove('hidden');
+           document.getElementById('tab-section').classList.remove('hidden');
+           loginModal.classList.add('hidden');
+           initializeGallery();
+           updateSubscriptionUI();
+       } else {
+           showError('password-error', 'Invalid username or password');
+       }
     });
-
+ 
     // Modified Logout logic
     const handleLogout = () => {
-        currentUsername = '';
-        currentProfile = null;
-        isLoggedIn = false;
-        userTier = 'free';
-        viewHistory = [];
-        followedUsers.clear();
-        
-        document.getElementById('open-login-btn').classList.remove('hidden');
-        document.getElementById('dev-panel').classList.add('hidden');
-        document.getElementById('tab-section').classList.add('hidden');
-        document.getElementById('view-mode').classList.remove('hidden');
-        document.getElementById('customize-mode').classList.add('hidden');
-        
-        // Close all new menus
-        document.getElementById('user-profile-menu').classList.add('hidden');
-        isProfileMenuOpen = false;
-        toggleSettings(false);
-        document.getElementById('subscription-modal').classList.add('hidden');
-        document.getElementById('saved-modal').classList.add('hidden');
-        
-        renderGallery();
-        updateSubscriptionUI();
+       currentUsername = '';
+       currentProfile = null;
+       isLoggedIn = false;
+       userTier = 'free';
+       viewHistory = [];
+       followedUsers.clear();
+       
+       document.getElementById('open-login-btn').classList.remove('hidden');
+       document.getElementById('dev-panel').classList.add('hidden');
+       document.getElementById('tab-section').classList.add('hidden');
+       document.getElementById('view-mode').classList.remove('hidden');
+       document.getElementById('customize-mode').classList.add('hidden');
+       
+       // Close all new menus
+       document.getElementById('user-profile-menu').classList.add('hidden');
+       isProfileMenuOpen = false;
+       toggleSettings(false);
+       document.getElementById('subscription-modal').classList.add('hidden');
+       document.getElementById('saved-modal').classList.add('hidden');
+       
+       renderGallery();
+       updateSubscriptionUI();
     };
-
+ 
     document.getElementById('logout-btn').addEventListener('click', handleLogout); // Kept original hidden btn for safety
     document.getElementById('logout-btn-menu').addEventListener('click', handleLogout); // New menu logout
-
+ 
     // ==================== USER PROFILE MENU LOGIC ====================
     const userProfileBtn = document.getElementById('user-profile-btn');
     const userProfileMenu = document.getElementById('user-profile-menu');
-
+ 
     userProfileBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        isProfileMenuOpen = !isProfileMenuOpen;
-        if(isProfileMenuOpen) userProfileMenu.classList.remove('hidden');
-        else userProfileMenu.classList.add('hidden');
+       e.stopPropagation();
+       isProfileMenuOpen = !isProfileMenuOpen;
+       if(isProfileMenuOpen) userProfileMenu.classList.remove('hidden');
+       else userProfileMenu.classList.add('hidden');
     });
-
+ 
     document.addEventListener('click', (e) => {
-        if(isProfileMenuOpen && !userProfileBtn.contains(e.target) && !userProfileMenu.contains(e.target)) {
-            isProfileMenuOpen = false;
-            userProfileMenu.classList.add('hidden');
-        }
+       if(isProfileMenuOpen && !userProfileBtn.contains(e.target) && !userProfileMenu.contains(e.target)) {
+           isProfileMenuOpen = false;
+           userProfileMenu.classList.add('hidden');
+       }
     });
-
+ 
     window.handleProfileOption = function(option) {
-        // Close menu
-        isProfileMenuOpen = false;
-        userProfileMenu.classList.add('hidden');
-
-        if(option === 'edit') {
-            document.getElementById('customize-btn').click();
-        } else if(option === 'subscriptions') {
-            document.getElementById('subscription-modal').classList.remove('hidden');
-        } else if(option === 'saved') {
-            renderFollowingList();
-            document.getElementById('saved-modal').classList.remove('hidden');
-        } else if(option === 'settings') {
-            toggleSettings(true);
-        }
+       // Close menu
+       isProfileMenuOpen = false;
+       userProfileMenu.classList.add('hidden');
+ 
+       if(option === 'edit') {
+           document.getElementById('customize-btn').click();
+       } else if(option === 'subscriptions') {
+           document.getElementById('subscription-modal').classList.remove('hidden');
+       } else if(option === 'saved') {
+           renderFollowingList();
+           document.getElementById('saved-modal').classList.remove('hidden');
+       } else if(option === 'settings') {
+           toggleSettings(true);
+       }
     };
-
+ 
     window.closeSubsAndScroll = function() {
-        document.getElementById('subscription-modal').classList.add('hidden');
-        document.getElementById('subscription').scrollIntoView({ behavior: 'smooth' });
+       document.getElementById('subscription-modal').classList.add('hidden');
+       document.getElementById('subscription').scrollIntoView({ behavior: 'smooth' });
     }
-    
+     
     window.closeSubsAndOpenStore = function() {
-        document.getElementById('subscription-modal').classList.add('hidden');
-        document.getElementById('premium-store-overlay').classList.remove('hidden');
+       document.getElementById('subscription-modal').classList.add('hidden');
+       document.getElementById('premium-store-overlay').classList.remove('hidden');
     }
-
+ 
     // ==================== SETTINGS DRAWER LOGIC ====================
     window.toggleSettings = function(show) {
-        const drawer = document.getElementById('settings-drawer');
-        if (show === undefined) {
-            // Toggle
-            if (drawer.classList.contains('hidden')) {
-                drawer.classList.remove('hidden');
-                drawer.classList.remove('slide-up');
-                drawer.classList.add('slide-down');
-            } else {
-                drawer.classList.remove('slide-down');
-                drawer.classList.add('slide-up');
-                setTimeout(() => drawer.classList.add('hidden'), 300);
-            }
-        } else if (show) {
-            drawer.classList.remove('hidden');
-            drawer.classList.remove('slide-up');
-            drawer.classList.add('slide-down');
-        } else {
-            drawer.classList.remove('slide-down');
-            drawer.classList.add('slide-up');
-            setTimeout(() => drawer.classList.add('hidden'), 300);
-        }
-        renderHistory();
+       const drawer = document.getElementById('settings-drawer');
+       if (show === undefined) {
+           // Toggle
+           if (drawer.classList.contains('hidden')) {
+               drawer.classList.remove('hidden');
+               drawer.classList.remove('slide-up');
+               drawer.classList.add('slide-down');
+           } else {
+               drawer.classList.remove('slide-down');
+               drawer.classList.add('slide-up');
+               setTimeout(() => drawer.classList.add('hidden'), 300);
+           }
+       } else if (show) {
+           drawer.classList.remove('hidden');
+           drawer.classList.remove('slide-up');
+           drawer.classList.add('slide-down');
+       } else {
+           drawer.classList.remove('slide-down');
+           drawer.classList.add('slide-up');
+           setTimeout(() => drawer.classList.add('hidden'), 300);
+       }
+       renderHistory();
     }
-
+ 
     window.switchAccount = function() {
-        if(confirm("Log out to switch account?")) {
-            handleLogout();
-            toggleSettings(false);
-            setTimeout(() => document.getElementById('open-login-btn').click(), 500);
-        }
+       if(confirm("Log out to switch account?")) {
+           handleLogout();
+           toggleSettings(false);
+           setTimeout(() => document.getElementById('open-login-btn').click(), 500);
+       }
     }
-
+ 
     // ==================== HISTORY & FOLLOWING LOGIC ====================
-    
+     
     // Follow Logic
     window.toggleFollow = function(authorId, authorName) {
-        if(!isLoggedIn) return alert("Please login to follow creators.");
-        
-        if(followedUsers.has(authorId)) {
-            followedUsers.delete(authorId);
-            const toast = document.getElementById('success-toast');
-            document.getElementById('toast-message').textContent = `Unfollowed ${authorName}`;
-            toast.classList.remove('hidden');
-            setTimeout(() => toast.classList.add('hidden'), 2000);
-        } else {
-            followedUsers.add(authorId);
-            const toast = document.getElementById('success-toast');
-            document.getElementById('toast-message').textContent = `Following ${authorName}`;
-            toast.classList.remove('hidden');
-            setTimeout(() => toast.classList.add('hidden'), 2000);
-        }
-        renderGallery(); // Re-render to update buttons
-        renderFollowingList();
+       if(!isLoggedIn) return alert("Please login to follow creators.");
+       
+       if(followedUsers.has(authorId)) {
+           followedUsers.delete(authorId);
+           const toast = document.getElementById('success-toast');
+           document.getElementById('toast-message').textContent = `Unfollowed ${authorName}`;
+           toast.classList.remove('hidden');
+           setTimeout(() => toast.classList.add('hidden'), 2000);
+       } else {
+           followedUsers.add(authorId);
+           const toast = document.getElementById('success-toast');
+           document.getElementById('toast-message').textContent = `Following ${authorName}`;
+           toast.classList.remove('hidden');
+           setTimeout(() => toast.classList.add('hidden'), 2000);
+       }
+       renderGallery(); // Re-render to update buttons
+       renderFollowingList();
     }
-
+ 
     function renderFollowingList() {
-        const container = document.getElementById('following-list');
-        if(followedUsers.size === 0) {
-            container.innerHTML = '<p class="text-center text-white/40 italic py-8">You aren\'t following anyone yet.</p>';
-            return;
-        }
-        
-        // Find unique authors from images array based on IDs in followedUsers
-        // In a real app, this would query a DB. Here we derive from sample data.
-        const uniqueAuthors = new Map();
-        images.forEach(img => {
-            if(img.author && followedUsers.has(img.author.id)) {
-                uniqueAuthors.set(img.author.id, img.author);
-            }
-        });
-
-        container.innerHTML = Array.from(uniqueAuthors.values()).map(auth => `
-            <div class="glass-dark p-3 rounded-xl flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <img src="${auth.avatar}" class="w-10 h-10 rounded-full bg-white/5">
-                    <div>
-                        <p class="font-bold text-sm">${auth.name}</p>
-                        <p class="text-[10px] text-green-400">Following</p>
-                    </div>
-                </div>
-                <button onclick="toggleFollow('${auth.id}', '${auth.name}')" class="px-3 py-1 rounded-lg bg-red-500/20 text-red-300 text-xs hover:bg-red-500/30">Unfollow</button>
-            </div>
-        `).join('');
+       const container = document.getElementById('following-list');
+       if(followedUsers.size === 0) {
+           container.innerHTML = '<p class="text-center text-white/40 italic py-8">You aren\'t following anyone yet.</p>';
+           return;
+       }
+       
+       // Find unique authors from images array based on IDs in followedUsers
+       // In a real app, this would query a DB. Here we derive from sample data.
+       const uniqueAuthors = new Map();
+       images.forEach(img => {
+           if(img.author && followedUsers.has(img.author.id)) {
+               uniqueAuthors.set(img.author.id, img.author);
+           }
+       });
+ 
+       container.innerHTML = Array.from(uniqueAuthors.values()).map(auth => `
+           <div class="glass-dark p-3 rounded-xl flex items-center justify-between">
+               <div class="flex items-center gap-3">
+                   <img src="${auth.avatar}" class="w-10 h-10 rounded-full bg-white/5">
+                   <div>
+                       <p class="font-bold text-sm">${auth.name}</p>
+                       <p class="text-[10px] text-green-400">Following</p>
+                   </div>
+               </div>
+               <button onclick="toggleFollow('${auth.id}', '${auth.name}')" class="px-3 py-1 rounded-lg bg-red-500/20 text-red-300 text-xs hover:bg-red-500/30">Unfollow</button>
+           </div>
+       `).join('');
     }
-
+ 
     // History Logic
     function addToHistory(img) {
-        if(!historyEnabled) return;
-        // Remove if already exists to move to top
-        viewHistory = viewHistory.filter(h => h.id !== img.id);
-        viewHistory.unshift(img);
-        if(viewHistory.length > 10) viewHistory.pop(); // Keep last 10
+       if(!historyEnabled) return;
+       // Remove if already exists to move to top
+       viewHistory = viewHistory.filter(h => h.id !== img.id);
+       viewHistory.unshift(img);
+       if(viewHistory.length > 10) viewHistory.pop(); // Keep last 10
     }
-
+ 
     window.toggleHistoryTracking = function() {
         historyEnabled = !historyEnabled;
         const btn = document.getElementById('history-toggle-btn');
         btn.textContent = historyEnabled ? 'Pause' : 'Resume';
         btn.className = historyEnabled ? 'text-xs px-2 py-1 rounded bg-white/10 hover:bg-white/20 transition-colors' : 'text-xs px-2 py-1 rounded bg-yellow-500/20 text-yellow-300';
     }
-
+ 
     window.clearHistory = function() {
         viewHistory = [];
         renderHistory();
     }
-
+ 
     function renderHistory() {
         const container = document.getElementById('history-list');
         if(viewHistory.length === 0) {
@@ -1632,50 +1566,50 @@
             </div>
         `).join('');
     }
-
+ 
     // ==================== 3D MASCOT & NAV LOGIC ====================
     window.handleNavLink = function(e, section) {
       e.preventDefault();
       
       // FIX: robust check for closeDropdown
       if (typeof window.closeDropdown === 'function') {
-          window.closeDropdown();
+         window.closeDropdown();
       }
-
+ 
       if (section === 'social') { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'center' }); return false; }
       if (section === 'about') { document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return false; }
       if (section === 'anime') { document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return false; }
       
       // Separate Logic for Standard Subscription vs Premium Store
       if (section === 'subscription') { 
-          document.getElementById('subscription')?.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
-          return false; 
+         document.getElementById('subscription')?.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+         return false; 
       }
       
       if (section === 'premium-store') {
-          const storeOverlay = document.getElementById('premium-store-overlay');
-          if(storeOverlay) storeOverlay.classList.remove('hidden');
-          return false;
+         const storeOverlay = document.getElementById('premium-store-overlay');
+         if(storeOverlay) storeOverlay.classList.remove('hidden');
+         return false;
       }
-
+ 
       if (section === 'chatbot') {
-          const commentsToggle = document.getElementById('comments-toggle-btn');
-          if(commentsToggle) commentsToggle.click();
-          if(typeof window.switchDrawerTab === 'function') window.switchDrawerTab('ai');
-          return false;
+         const commentsToggle = document.getElementById('comments-toggle-btn');
+         if(commentsToggle) commentsToggle.click();
+         if(typeof window.switchDrawerTab === 'function') window.switchDrawerTab('ai');
+         return false;
       }
       if (section === 'support') {
-        document.getElementById('support')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return false;
+       document.getElementById('support')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+       return false;
       }
       return false;
     };
-
+ 
     window.closePremiumStore = function() {
         const storeOverlay = document.getElementById('premium-store-overlay');
         if(storeOverlay) storeOverlay.classList.add('hidden');
     }
-
+ 
     function init3DMascot() {
         const container = document.getElementById('mascot-container');
         if (!container) return;
@@ -1684,7 +1618,7 @@
         while(container.firstChild) {
             container.removeChild(container.firstChild);
         }
-
+ 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
         camera.position.z = 5.5; 
@@ -1709,10 +1643,10 @@
         const pinkLight = new THREE.PointLight(0xd53369, 2, 10);
         pinkLight.position.set(2, -1, 3);
         scene.add(pinkLight);
-
+ 
         const logoGroup = new THREE.Group();
         const extrudeSettings = { depth: 0.5, bevelEnabled: true, bevelSegments: 4, steps: 2, bevelSize: 0.05, bevelThickness: 0.1 };
-
+ 
         // Material Style: Futuristic Glossy
         const matA = new THREE.MeshPhongMaterial({ 
             color: 0x22d3ee, 
@@ -1729,7 +1663,7 @@
             specular: 0xffffff, 
             shininess: 80 
         });
-
+ 
         // SHAPE 'A'
         const shapeA = new THREE.Shape();
         shapeA.moveTo(0, 0);
@@ -1747,14 +1681,14 @@
         holeA.lineTo(0.8, 0.7);
         holeA.lineTo(0.6, 0.7);
         shapeA.holes.push(holeA);
-
+ 
         const geoA = new THREE.ExtrudeGeometry(shapeA, extrudeSettings);
         geoA.center();
         const meshA = new THREE.Mesh(geoA, matA);
         meshA.position.x = -0.7;
         // meshA.rotation.z = -0.1;
         logoGroup.add(meshA);
-
+ 
         // SHAPE 'V'
         const shapeV = new THREE.Shape();
         shapeV.moveTo(0, 2.2);
@@ -1764,14 +1698,14 @@
         shapeV.lineTo(0.7, 0.9);
         shapeV.lineTo(0.4, 2.2);
         shapeV.lineTo(0, 2.2);
-
+ 
         const geoV = new THREE.ExtrudeGeometry(shapeV, extrudeSettings);
         geoV.center();
         const meshV = new THREE.Mesh(geoV, matV);
         meshV.position.x = 0.7;
         // meshV.rotation.z = 0.1;
         logoGroup.add(meshV);
-
+ 
         // Tech Rings
         const torusGeo = new THREE.TorusGeometry(2.5, 0.02, 16, 100);
         const torusMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.15 });
@@ -1783,7 +1717,7 @@
         const ring2 = new THREE.Mesh(torusGeo2, torusMat);
         ring2.rotation.y = Math.PI / 4;
         logoGroup.add(ring2);
-
+ 
         // Particles
         const particles = [];
         const particleGeo = new THREE.TetrahedronGeometry(0.08, 0);
@@ -1811,7 +1745,7 @@
         }
         
         scene.add(logoGroup);
-
+ 
         function animate() {
             requestAnimationFrame(animate);
             
@@ -1820,12 +1754,12 @@
             
             ring1.rotation.x += 0.01;
             ring2.rotation.y -= 0.01;
-
+ 
             particles.forEach(p => {
                 p.rotation.x += p.userData.rotationSpeed;
                 p.rotation.y += p.userData.rotationSpeed;
             });
-
+ 
             renderer.render(scene, camera);
         }
         animate();
@@ -1836,15 +1770,15 @@
             }
         });
     }
-
+ 
     if (document.readyState === 'loading') { window.addEventListener('DOMContentLoaded', () => { try { init3DMascot(); } catch(e) {} }); } else { try { init3DMascot(); } catch(e) {} }
-
+ 
     // ==================== GALLERY & NAV UI ====================
     const navMenuToggle = document.getElementById('nav-menu-toggle');
     const navDropdown = document.getElementById('nav-dropdown');
     const menuChevron = document.getElementById('menu-chevron');
     const logoIconToggle = document.getElementById('logo-icon-toggle');
-
+ 
     function toggleDropdown() {
       isDropdownOpen = !isDropdownOpen;
       if (isDropdownOpen) { navDropdown.classList.remove('hidden'); menuChevron.style.transform = 'rotate(180deg)'; } 
@@ -1858,18 +1792,18 @@
     document.addEventListener('click', (e) => {
       if (!navMenuToggle.contains(e.target) && !navDropdown.contains(e.target) && (!logoIconToggle || !logoIconToggle.contains(e.target))) { closeDropdown(); }
     });
-
+ 
     // Gallery Logic
     // Bulk Action Elements (Moved to Header)
     // Lightbox Elements
     const lightbox = document.getElementById('image-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-
+ 
     // Pagination Elements
     // Moved to local scope in listeners
-
+ 
     function initializeGallery() { images = []; selectedImageIds.clear(); currentPage = 1; renderGallery(); updateStats(); updateBulkUI(); }
-    
+     
     // NEW: Handle Workbench Logic
     window.handleUploadClick = function() {
         if(userTier === 'free') {
@@ -1879,8 +1813,8 @@
             const msg = document.getElementById('toast-message');
             if(msg) msg.textContent = "Upgrade to Creator to publish images!";
             if(toast) {
-                toast.classList.remove('hidden');
-                setTimeout(() => toast.classList.add('hidden'), 3000);
+               toast.classList.remove('hidden');
+               setTimeout(() => toast.classList.add('hidden'), 3000);
             }
         } else {
             // Open Workbench
@@ -1888,7 +1822,7 @@
             if(workbench) workbench.classList.remove('hidden');
         }
     }
-
+ 
     window.closeWorkbench = function() {
         const workbench = document.getElementById('creator-workbench');
         if(workbench) workbench.classList.add('hidden');
@@ -1900,7 +1834,7 @@
         document.getElementById('workbench-category').value = '';
         document.getElementById('workbench-file-input').value = '';
     }
-
+ 
     window.handleWorkbenchFileSelect = function(e) {
         const file = e.target.files[0];
         if (file && file.type.startsWith('image/')) {
@@ -1920,7 +1854,7 @@
             reader.readAsDataURL(file);
         }
     }
-
+ 
     window.publishFromWorkbench = function() {
         if(!workbenchImage) return alert("Please upload an image first.");
         const name = document.getElementById('workbench-name').value.trim();
@@ -1928,7 +1862,7 @@
         
         if(!name) return alert("Please give your artwork a name.");
         if(!category) return alert("Please select a category.");
-
+ 
         // Add to images array
         images.unshift({ 
             id: 'pub-' + Date.now(), 
@@ -1939,7 +1873,7 @@
             likes: 0, 
             isLiked: false
         });
-
+ 
         // Refresh Gallery
         currentPage = 1;
         renderGallery();
@@ -1951,56 +1885,56 @@
         const msg = document.getElementById('toast-message');
         if(msg) msg.textContent = "Artwork published successfully!";
         if(toast) {
-            toast.classList.remove('hidden');
-            setTimeout(() => toast.classList.add('hidden'), 3000);
+           toast.classList.remove('hidden');
+           setTimeout(() => toast.classList.add('hidden'), 3000);
         }
     }
-
+ 
     // Deprecated direct upload handler
     function handleImageUpload(e) {
       // Logic moved to workbench
     }
-
+ 
     function getFilteredImages() { if (!searchQuery) return images; return images.filter(img => img.name.toLowerCase().includes(searchQuery)); }
     function formatDate(dateString) { const date = new Date(dateString); return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
-    
+     
     function updateStats() { 
         const statImages = document.getElementById('stat-images');
         const previewCount = document.getElementById('preview-count');
         if(statImages) statImages.textContent = images.length; 
         if(previewCount) previewCount.textContent = images.length; 
     }
-
+ 
     function updateBulkUI() {
         const bulkActions = document.getElementById('bulk-actions');
         const clearAllBtn = document.getElementById('clear-all-btn');
         const selectAllCheckbox = document.getElementById('select-all-checkbox');
         const selectedCountDisplay = document.getElementById('selected-count-display');
-
+ 
         const count = selectedImageIds.size;
         if(selectedCountDisplay) selectedCountDisplay.textContent = count;
         if (count > 0) {
-            if(bulkActions) bulkActions.classList.remove('hidden');
-            if(clearAllBtn) clearAllBtn.classList.add('hidden'); 
+           if(bulkActions) bulkActions.classList.remove('hidden');
+           if(clearAllBtn) clearAllBtn.classList.add('hidden'); 
         } else {
-            if(bulkActions) bulkActions.classList.add('hidden');
-            if(clearAllBtn) clearAllBtn.classList.remove('hidden');
-            if(selectAllCheckbox) selectAllCheckbox.checked = false;
+           if(bulkActions) bulkActions.classList.add('hidden');
+           if(clearAllBtn) clearAllBtn.classList.remove('hidden');
+           if(selectAllCheckbox) selectAllCheckbox.checked = false;
         }
     }
-
+ 
     window.toggleSelection = function(id) {
         const strId = String(id);
         if (selectedImageIds.has(strId)) { selectedImageIds.delete(strId); } else { selectedImageIds.add(strId); }
         renderGallery(); updateBulkUI();
     };
-
+ 
     window.deselectAll = function() {
         selectedImageIds.clear();
         renderGallery();
         updateBulkUI();
     };
-
+ 
     window.viewImage = function(id) {
         const img = images.find(img => String(img.id) === String(id));
         
@@ -2008,7 +1942,7 @@
         if(img) {
             // Log history
             if(isLoggedIn) addToHistory(img);
-
+ 
             lightboxImg.src = img.src;
             lightbox.classList.remove('hidden');
             setTimeout(() => {
@@ -2018,7 +1952,7 @@
             }, 10);
         }
     }
-
+ 
     window.closeLightbox = function() {
         lightbox.classList.add('opacity-0');
         lightboxImg.classList.remove('scale-100');
@@ -2028,7 +1962,7 @@
             lightboxImg.src = '';
         }, 300);
     }
-
+ 
     window.deleteImage = function(id) {
         if(confirm('Are you sure you want to delete this image?')) {
             const targetId = String(id);
@@ -2037,14 +1971,14 @@
             renderGallery(); updateStats(); updateBulkUI();
         }
     };
-
+ 
     window.clearAllImages = function() {
         if(images.length === 0) return alert("No images to clear!");
         if(confirm('Are you sure you want to delete ALL images? This action cannot be undone.')) {
             images = []; selectedImageIds.clear(); renderGallery(); updateStats(); updateBulkUI();
         }
     };
-
+ 
     window.editImageName = function(id) {
         const img = images.find(img => String(img.id) === String(id));
         if(img) {
@@ -2052,24 +1986,24 @@
             if(newName && newName.trim() !== "") { img.name = newName.trim(); renderGallery(); }
         }
     };
-
+ 
     window.toggleLike = function(id) {
         const img = images.find(img => String(img.id) === String(id));
         if(img) {
-            if(img.isLiked) { img.likes--; img.isLiked = false; } else { img.likes++; img.isLiked = true; }
-            renderGallery();
+           if(img.isLiked) { img.likes--; img.isLiked = false; } else { img.likes++; img.isLiked = true; }
+           renderGallery();
         }
     };
-
+ 
     // --- PAGINATION FUNCTIONS ---
     function renderPagination(totalPages) {
       const prevBtn = document.getElementById('prev-btn');
       const nextBtn = document.getElementById('next-btn');
       const pageNumbers = document.getElementById('page-numbers');
-
+ 
       if(prevBtn) prevBtn.disabled = currentPage === 1;
       if(nextBtn) nextBtn.disabled = currentPage === totalPages;
-
+ 
       let pages = [];
       if (totalPages <= 5) {
         pages = Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -2082,9 +2016,9 @@
           pages = [1, '...', currentPage, '...', totalPages];
         }
       }
-
+ 
       if(pageNumbers) {
-          pageNumbers.innerHTML = pages.map(page => {
+         pageNumbers.innerHTML = pages.map(page => {
             if (page === '...') {
               return `<span class="w-10 h-10 flex items-center justify-center text-white/40">...</span>`;
             }
@@ -2100,21 +2034,21 @@
           }).join('');
       }
     }
-
+ 
     window.goToPage = function(page) {
       currentPage = page;
       renderGallery();
       document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
     }
-
+ 
     function renderGallery() {
         const galleryGrid = document.getElementById('gallery-grid');
         const emptyState = document.getElementById('empty-state');
         const pagination = document.getElementById('pagination');
         const selectAllCheckbox = document.getElementById('select-all-checkbox');
-
+ 
         if (!galleryGrid || !emptyState) return;
-
+ 
         const filtered = getFilteredImages();
         
         // 1. Calculate Pagination
@@ -2123,21 +2057,21 @@
         // Safety check for current page
         if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
         if (currentPage < 1) currentPage = 1;
-
+ 
         // 2. Slice Images for Current Page
         const startIndex = (currentPage - 1) * imagesPerPage;
         const endIndex = startIndex + imagesPerPage;
         const pageImages = filtered.slice(startIndex, endIndex);
-
+ 
         // 3. Sync Checkbox
         if(selectAllCheckbox && filtered.length > 0) { selectAllCheckbox.checked = filtered.every(img => selectedImageIds.has(String(img.id))); }
         
         // 4. Handle Empty State
         if (filtered.length === 0) { 
-            galleryGrid.innerHTML = ''; 
-            emptyState.classList.remove('hidden'); 
-            if(pagination) pagination.classList.add('hidden');
-            return; 
+           galleryGrid.innerHTML = ''; 
+           emptyState.classList.remove('hidden'); 
+           if(pagination) pagination.classList.add('hidden');
+           return; 
         }
         emptyState.classList.add('hidden');
         
@@ -2148,7 +2082,7 @@
             // Mock Author if missing
             const author = img.author || { name: 'Unknown', id: 'unknown', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Unknown' };
             const isFollowing = followedUsers.has(author.id);
-
+ 
             return `
             <div class="gallery-card glass rounded-2xl overflow-hidden fade-in relative group ${isSelected ? 'ring-2 ring-blue-500 bg-blue-500/10' : ''}" style="animation-delay: ${index * 0.05}s">
                 <div class="absolute top-3 left-3 z-30 transform transition-transform ${isSelected ? 'scale-100' : 'scale-90 opacity-0 group-hover:opacity-100'}">
@@ -2165,47 +2099,46 @@
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
                         </button>
                     </div>
-
+ 
                     <div class="card-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 pointer-events-none">
                         <div class="flex items-center justify-between mb-2 pointer-events-auto">
                             <div class="flex items-center gap-2 truncate flex-1 min-w-0">
-                                <h3 class="font-semibold text-sm truncate text-white" title="${img.name}">${img.name}</h3>
-                                <button onclick="event.stopPropagation(); editImageName('${img.id}')" class="text-white/60 hover:text-white transition-colors flex-shrink-0" title="Edit Name"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg></button>
+                                 <h3 class="font-semibold text-sm truncate text-white" title="${img.name}">${img.name}</h3>
+                                 <button onclick="event.stopPropagation(); editImageName('${img.id}')" class="text-white/60 hover:text-white transition-colors flex-shrink-0" title="Edit Name"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg></button>
                             </div>
                         </div>
                         
-                        <!-- Publisher Info -->
                         <div class="flex items-center justify-between mb-2 pointer-events-auto">
                             <div class="flex items-center gap-2" title="Published by ${author.name}">
-                                <img src="${author.avatar}" class="w-5 h-5 rounded-full border border-white/30">
-                                <span class="text-xs text-white/80 font-medium truncate max-w-[80px]">${author.name}</span>
+                                 <img src="${author.avatar}" class="w-5 h-5 rounded-full border border-white/30">
+                                 <span class="text-xs text-white/80 font-medium truncate max-w-[80px]">${author.name}</span>
                             </div>
                             <button onclick="event.stopPropagation(); toggleFollow('${author.id}', '${author.name}')" class="text-[10px] font-bold px-2 py-0.5 rounded-md transition-colors ${isFollowing ? 'bg-green-500/20 text-green-300 hover:bg-green-500/30' : 'bg-blue-500/20 text-blue-300 hover:bg-blue-500/30'}">
-                                ${isFollowing ? 'Following' : '+ Follow'}
+                                 ${isFollowing ? 'Following' : '+ Follow'}
                             </button>
                         </div>
-
+ 
                         <div class="flex items-center justify-between pointer-events-auto border-t border-white/10 pt-2">
                             <p class="text-white/50 text-xs">${formatDate(img.uploadedAt)}</p>
                             <button onclick="event.stopPropagation(); toggleLike('${img.id}')" class="flex items-center gap-1.5 group/like bg-white/10 hover:bg-white/20 px-2 py-1 rounded-full transition-colors">
-                                <svg class="w-4 h-4 transition-transform ${img.isLiked ? 'text-red-500 fill-red-500 scale-110' : 'text-white/70 group-hover/like:text-red-400 group-hover/like:scale-110'}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                                <span class="text-xs font-medium text-white/90">${img.likes || 0}</span>
+                                 <svg class="w-4 h-4 transition-transform ${img.isLiked ? 'text-red-500 fill-red-500 scale-110' : 'text-white/70 group-hover/like:text-red-400 group-hover/like:scale-110'}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                                 <span class="text-xs font-medium text-white/90">${img.likes || 0}</span>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>`;
         }).join('');
-
+ 
         // 6. Render Pagination UI
         if (totalPages > 1) {
-            if(pagination) pagination.classList.remove('hidden');
-            renderPagination(totalPages);
+           if(pagination) pagination.classList.remove('hidden');
+           renderPagination(totalPages);
         } else {
-            if(pagination) pagination.classList.add('hidden');
+           if(pagination) pagination.classList.add('hidden');
         }
     }
-
+ 
     // Toggle Tabs
     const viewBtn = document.getElementById('view-btn');
     const customizeBtn = document.getElementById('customize-btn');
@@ -2213,136 +2146,509 @@
     const customizeMode = document.getElementById('customize-mode');
     if(viewBtn) viewBtn.addEventListener('click', () => { if(!isLoggedIn) return; viewMode.classList.remove('hidden'); customizeMode.classList.add('hidden'); viewBtn.classList.add('active'); customizeBtn.classList.remove('active'); });
     if(customizeBtn) customizeBtn.addEventListener('click', () => { if(!isLoggedIn) return; customizeMode.classList.remove('hidden'); viewMode.classList.add('hidden'); customizeBtn.classList.add('active'); viewBtn.classList.remove('active'); });
-
+ 
     // Comments & Subs
     const commentsToggleBtn = document.getElementById('comments-toggle-btn');
     const commentsDrawer = document.getElementById('comments-drawer');
     const commentsOverlay = document.getElementById('comments-overlay');
     const closeCommentsBtn = document.getElementById('close-comments-btn');
-    const commentInput = document.getElementById('comment-input');
-    const sendCommentBtn = document.getElementById('send-comment-btn');
-    const commentsList = document.getElementById('comments-list');
-    
+    // const commentInput = document.getElementById('comment-input'); // Declared below
+    // const sendCommentBtn = document.getElementById('send-comment-btn'); // Declared below
+    // const commentsList = document.getElementById('comments-list'); // Declared below
+     
     // AI Chat Elements
-    const tabCommunity = document.getElementById('tab-community');
-    const tabAi = document.getElementById('tab-ai');
-    const viewCommunity = document.getElementById('view-community');
-    const viewAi = document.getElementById('view-ai');
-    const aiInput = document.getElementById('ai-input');
-    const aiChatList = document.getElementById('ai-chat-list');
-
+    // const tabCommunity = document.getElementById('tab-community'); // Declared below
+    // const tabAi = document.getElementById('tab-ai'); // Declared below
+    // const viewCommunity = document.getElementById('view-community'); // Declared below
+    // const viewAi = document.getElementById('view-ai'); // Declared below
+    // const aiInput = document.getElementById('ai-input'); // Declared below
+    // const aiChatList = document.getElementById('ai-chat-list'); // Declared below
+ 
     let localComments = JSON.parse(localStorage.getItem('avanode_comments')) || [{ text: "Welcome to the community! 👋", author: "System", time: new Date().toLocaleDateString() }];
-
+ 
     function openComments() { commentsOverlay.classList.remove('hidden'); setTimeout(() => { commentsOverlay.classList.remove('opacity-0'); commentsDrawer.classList.remove('translate-x-full'); }, 10); }
     function closeComments() { commentsOverlay.classList.add('opacity-0'); commentsDrawer.classList.add('translate-x-full'); setTimeout(() => commentsOverlay.classList.add('hidden'), 300); }
     if(commentsToggleBtn) commentsToggleBtn.addEventListener('click', openComments);
     if(closeCommentsBtn) closeCommentsBtn.addEventListener('click', closeComments);
     if(commentsOverlay) commentsOverlay.addEventListener('click', closeComments);
-
+ 
     // --- Tab Switching Logic ---
     window.switchDrawerTab = function(tab) {
         if (tab === 'community') {
-            tabCommunity.classList.add('bg-white/20', 'text-white', 'shadow-sm');
-            tabCommunity.classList.remove('text-white/50', 'hover:bg-white/5');
-            
-            tabAi.classList.add('text-white/50', 'hover:bg-white/5');
-            tabAi.classList.remove('bg-white/20', 'text-white', 'shadow-sm');
-            
-            viewCommunity.classList.remove('hidden');
-            viewAi.classList.add('hidden');
+           tabCommunity.classList.add('bg-white/20', 'text-white', 'shadow-sm');
+           tabCommunity.classList.remove('text-white/50', 'hover:bg-white/5');
+           
+           tabAi.classList.add('text-white/50', 'hover:bg-white/5');
+           tabAi.classList.remove('bg-white/20', 'text-white', 'shadow-sm');
+           
+           viewCommunity.classList.remove('hidden');
+           viewAi.classList.add('hidden');
         } else {
-            tabAi.classList.add('bg-white/20', 'text-white', 'shadow-sm');
-            tabAi.classList.remove('text-white/50', 'hover:bg-white/5');
-            
-            tabCommunity.classList.add('text-white/50', 'hover:bg-white/5');
-            tabCommunity.classList.remove('bg-white/20', 'text-white', 'shadow-sm');
-            
-            viewAi.classList.remove('hidden');
-            viewCommunity.classList.add('hidden');
+           tabAi.classList.add('bg-white/20', 'text-white', 'shadow-sm');
+           tabAi.classList.remove('text-white/50', 'hover:bg-white/5');
+           
+           tabCommunity.classList.add('text-white/50', 'hover:bg-white/5');
+           tabCommunity.classList.remove('bg-white/20', 'text-white', 'shadow-sm');
+           
+           viewAi.classList.remove('hidden');
+           viewCommunity.classList.add('hidden');
         }
     };
-
+ 
     // --- Community Comments Logic ---
     function renderComments() {
-        if(!commentsList) return;
-        commentsList.innerHTML = localComments.map(c => `
-            <div class="glass-dark rounded-xl p-4 shadow-sm border border-white/5">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-sm font-bold shadow-inner text-white">${c.author.charAt(0).toUpperCase()}</div>
-                    <div><div class="font-semibold text-sm text-white/90">${c.author}</div><div class="text-[10px] text-white/40">${c.time}</div></div>
-                </div>
-                <div class="text-white/80 text-sm ml-11 leading-relaxed whitespace-pre-wrap">${c.text}</div>
-            </div>`).join('');
-        commentsList.scrollTop = commentsList.scrollHeight;
+       if(!commentsList) return;
+       commentsList.innerHTML = localComments.map(c => `
+           <div class="glass-dark rounded-xl p-4 shadow-sm border border-white/5">
+               <div class="flex items-center gap-3 mb-2">
+                   <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-sm font-bold shadow-inner text-white">${c.author.charAt(0).toUpperCase()}</div>
+                   <div><div class="font-semibold text-sm text-white/90">${c.author}</div><div class="text-[10px] text-white/40">${c.time}</div></div>
+               </div>
+               <div class="text-white/80 text-sm ml-11 leading-relaxed whitespace-pre-wrap">${c.text}</div>
+           </div>`).join('');
+       commentsList.scrollTop = commentsList.scrollHeight;
     }
-    
+     
     function postComment() {
-        const text = commentInput.value.trim();
-        if(!text) return;
-        localComments.push({ text, author: currentUsername || 'Anonymous', time: new Date().toLocaleString() });
-        localStorage.setItem('avanode_comments', JSON.stringify(localComments));
-        commentInput.value = ''; renderComments();
+       const text = commentInput.value.trim();
+       if(!text) return;
+       localComments.push({ text, author: currentUsername || 'Anonymous', time: new Date().toLocaleString() });
+       localStorage.setItem('avanode_comments', JSON.stringify(localComments));
+       commentInput.value = ''; renderComments();
     }
     if(sendCommentBtn) sendCommentBtn.addEventListener('click', postComment);
     renderComments();
-
+ 
     // --- AI Chat Logic ---
     window.sendAiMessage = function() {
-        const text = aiInput.value.trim();
-        if(!text) return;
-
-        // 1. Add User Message
-        const userDiv = document.createElement('div');
-        userDiv.className = 'flex items-end justify-end gap-2 animate-in fade-in slide-in-from-bottom-2';
-        userDiv.innerHTML = `
-            <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl rounded-tr-none p-3 text-sm text-white max-w-[85%] shadow-lg">
-                ${text}
-            </div>
-        `;
-        aiChatList.appendChild(userDiv);
-        aiInput.value = '';
-        aiChatList.scrollTop = aiChatList.scrollHeight;
-
-        // 2. Simulate AI Typing/Response
-        setTimeout(() => {
-            const aiDiv = document.createElement('div');
-            aiDiv.className = 'flex items-start gap-3 animate-in fade-in slide-in-from-bottom-2';
-            
-            // Context-aware response logic
-            let response = "I'm still learning about the website, but feel free to explore the Gallery or Developer tools!";
-            const lowerText = text.toLowerCase();
-            
-            // Site-specific knowledge base
-            if(lowerText.includes('hello') || lowerText.includes('hi')) response = "Hello! I am the Avanode AI Assistant. How can I help you navigate the website today?";
-            else if(lowerText.includes('upload')) response = "To upload images, go to the 'Multimedia Gallery' section and click the 'Upload' button in the top right corner. We support JPG, PNG, and GIF formats.";
-            else if(lowerText.includes('delete') || lowerText.includes('remove')) response = "You can delete images by selecting them using the checkboxes and clicking 'Delete Selected' in the toolbar, or by hovering over an image and clicking the trash icon.";
-            else if(lowerText.includes('rohit') || lowerText.includes('founder')) response = "Rohit Phogat is the visionary founder behind Avanode Digitals. He specializes in blending Animation Arts with Sustainable Technology.";
-            else if(lowerText.includes('energy') || lowerText.includes('renewable')) response = "Avanode Digitals is dedicated to promoting renewable energy research and integrating sustainable practices into digital innovation.";
-            else if(lowerText.includes('anime')) response = "Our Anime & Animated Wallpapers section showcases curated digital art. You can find it in the navigation menu or scroll down to the gallery.";
-            else if(lowerText.includes('developer') || lowerText.includes('login')) response = "The Developer Login is located in the top right corner. If you don't have an account, you can register directly through the login modal.";
-            else if(lowerText.includes('subscribe') || lowerText.includes('premium')) response = "Our subscription plans include Explorer (Free), Creator ($19/mo), and Studio ($49/mo). Check the Subscription section for details!";
-            else if(lowerText.includes('contact') || lowerText.includes('support')) response = "You can reach our support team at +91 70151 23151 or connect via WhatsApp, LinkedIn, and Email in the footer section.";
-
-            aiDiv.innerHTML = `
-                <div class="w-8 h-8 rounded-full overflow-hidden border border-white/30 flex-shrink-0">
-                    <img src="https://api.dicebear.com/9.x/bottts-neutral/svg?seed=AvanodeAI" alt="AI" class="w-full h-full object-cover">
-                </div>
-                <div class="glass-dark rounded-2xl rounded-tl-none p-3 text-sm text-white/90 max-w-[85%] shadow-sm">
-                    ${response}
-                </div>
+       const text = aiInput.value.trim();
+       if(!text) return;
+ 
+       // 1. Add User Message
+       const userDiv = document.createElement('div');
+       userDiv.className = 'flex items-end justify-end gap-2 animate-in fade-in slide-in-from-bottom-2';
+       userDiv.innerHTML = `
+           <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl rounded-tr-none p-3 text-sm text-white max-w-[85%] shadow-lg">
+               ${text}
+           </div>
+       `;
+       aiChatList.appendChild(userDiv);
+       aiInput.value = '';
+       aiChatList.scrollTop = aiChatList.scrollHeight;
+ 
+       // 2. Simulate AI Typing/Response
+       setTimeout(() => {
+           const aiDiv = document.createElement('div');
+           aiDiv.className = 'flex items-start gap-3 animate-in fade-in slide-in-from-bottom-2';
+           
+           // Context-aware response logic
+           let response = "I'm still learning about the website, but feel free to explore the Gallery or Developer tools!";
+           const lowerText = text.toLowerCase();
+           
+           // Site-specific knowledge base
+           if(lowerText.includes('hello') || lowerText.includes('hi')) response = "Hello! I am the Avanode AI Assistant. How can I help you navigate the website today?";
+           else if(lowerText.includes('upload')) response = "To upload images, go to the 'Multimedia Gallery' section and click the 'Upload' button in the top right corner. We support JPG, PNG, and GIF formats.";
+           else if(lowerText.includes('delete') || lowerText.includes('remove')) response = "You can delete images by selecting them using the checkboxes and clicking 'Delete Selected' in the toolbar, or by hovering over an image and clicking the trash icon.";
+           else if(lowerText.includes('rohit') || lowerText.includes('founder')) response = "Rohit Phogat is the visionary founder behind Avanode Digitals. He specializes in blending Animation Arts with Sustainable Technology.";
+           else if(lowerText.includes('energy') || lowerText.includes('renewable')) response = "Avanode Digitals is dedicated to promoting renewable energy research and integrating sustainable practices into digital innovation.";
+           else if(lowerText.includes('anime')) response = "Our Anime & Animated Wallpapers section showcases curated digital art. You can find it in the navigation menu or scroll down to the gallery.";
+           else if(lowerText.includes('developer') || lowerText.includes('login')) response = "The Developer Login is located in the top right corner. If you don't have an account, you can register directly through the login modal.";
+           else if(lowerText.includes('subscribe') || lowerText.includes('premium')) response = "Our subscription plans include Explorer (Free), Creator ($19/mo), and Studio ($49/mo). Check the Subscription section for details!";
+           else if(lowerText.includes('contact') || lowerText.includes('support')) response = "You can reach our support team at +91 70151 23151 or connect via WhatsApp, LinkedIn, and Email in the footer section.";
+ 
+           aiDiv.innerHTML = `
+               <div class="w-8 h-8 rounded-full overflow-hidden border border-white/30 flex-shrink-0">
+                   <img src="https://api.dicebear.com/9.x/bottts-neutral/svg?seed=AvanodeAI" alt="AI" class="w-full h-full object-cover">
+               </div>
+               <div class="glass-dark rounded-2xl rounded-tl-none p-3 text-sm text-white/90 max-w-[85%] shadow-sm">
+                   ${response}
+               </div>
             `;
-            aiChatList.appendChild(aiDiv);
-            aiChatList.scrollTop = aiChatList.scrollHeight;
-        }, 1000); // 1 second delay for realism
+           aiChatList.appendChild(aiDiv);
+           aiChatList.scrollTop = aiChatList.scrollHeight;
+       }, 1000); // 1 second delay for realism
     };
-
-    // Removed the individual event listeners since we added onclick handlers directly to HTML elements
+ 
     // const topSubscribeBtn = document.getElementById('top-subscribe-btn');
     // const floatingSubscribeBtn = document.getElementById('floating-subscribe-btn');
     // function handleSubscribeClick() { alert('Subscription options coming soon! 🛒'); }
     // if(topSubscribeBtn) topSubscribeBtn.addEventListener('click', handleSubscribeClick);
     // if(floatingSubscribeBtn) floatingSubscribeBtn.addEventListener('click', handleSubscribeClick);
-
+ 
   </script>
- </body>
+<div id="comments-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
+
+<div id="comments-drawer" class="fixed inset-y-0 right-0 w-full sm:w-[420px] bg-[#111] border-l border-white/10 z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+
+    <div class="p-5 border-b border-white/10 flex justify-between items-center">
+    <h3 class="font-bold text-lg text-white">💬 Social Hub</h3>
+    <button id="close-comments-btn">✖</button>
+  </div>
+
+    <div class="flex p-2 gap-2">
+    <button id="tab-community" class="flex-1 py-2 bg-white/20 rounded">Community</button>
+    <button id="tab-ai" class="flex-1 py-2 bg-white/5 rounded">AI Chat</button>
+  </div>
+
+    <div id="view-community" class="flex-1 flex flex-col">
+    <div id="comments-list" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+
+    <div class="p-4 border-t border-white/10">
+      <textarea id="comment-input" class="w-full p-2 bg-black border border-white/10 rounded" placeholder="Write comment..."></textarea>
+      <button id="send-comment-btn" class="mt-2 w-full bg-blue-600 py-2 rounded">Post</button>
+    </div>
+  </div>
+
+    <div id="view-ai" class="hidden flex-1 flex flex-col">
+    <div id="ai-chat-list" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+
+    <div class="p-4 border-t border-white/10 flex gap-2">
+      <input id="ai-input" class="flex-1 p-2 bg-black border border-white/10 rounded" placeholder="Ask AI...">
+      <button onclick="sendAiMessage()" class="bg-purple-600 px-4 rounded">Send</button>
+    </div>
+  </div>
+
+</div>
+
+<button id="comments-toggle-btn"
+ style="position:fixed; bottom:20px; right:20px; width:60px; height:60px; border-radius:50%; background:#6366f1; color:white; font-size:24px;">
+💬
+</button>
+<style>
+#comments-list div{
+  background:#1a1a1a;
+  padding:10px;
+  border-radius:10px;
+}
+</style>
+<script>
+// ELEMENTS
+const drawer = document.getElementById("comments-drawer");
+const overlay = document.getElementById("comments-overlay");
+const toggleBtn = document.getElementById("comments-toggle-btn");
+const closeBtn = document.getElementById("close-comments-btn");
+
+const tabCommunity = document.getElementById("tab-community");
+const tabAi = document.getElementById("tab-ai");
+const viewCommunity = document.getElementById("view-community");
+const viewAi = document.getElementById("view-ai");
+
+const commentInput = document.getElementById("comment-input");
+const sendCommentBtn = document.getElementById("send-comment-btn");
+const commentsList = document.getElementById("comments-list");
+
+const aiInput = document.getElementById("ai-input");
+const aiChatList = document.getElementById("ai-chat-list");
+
+
+// OPEN CLOSE
+toggleBtn.onclick = () => {
+  overlay.classList.remove("hidden");
+  setTimeout(()=>{
+    overlay.classList.remove("opacity-0");
+    drawer.classList.remove("translate-x-full");
+  },10);
+};
+
+closeBtn.onclick = closeDrawer;
+overlay.onclick = closeDrawer;
+
+function closeDrawer(){
+  overlay.classList.add("opacity-0");
+  drawer.classList.add("translate-x-full");
+  setTimeout(()=> overlay.classList.add("hidden"),300);
+}
+
+
+// TAB SWITCH
+tabCommunity.onclick = () =>{
+  viewCommunity.classList.remove("hidden");
+  viewAi.classList.add("hidden");
+};
+
+tabAi.onclick = () =>{
+  viewAi.classList.remove("hidden");
+  viewCommunity.classList.add("hidden");
+};
+
+
+// LOCAL STORAGE COMMENTS
+let comments = JSON.parse(localStorage.getItem("chat_comments") || "[]");
+
+function renderComments(){
+  commentsList.innerHTML="";
+  comments.forEach(c=>{
+    commentsList.innerHTML += `
+      <div>
+        <b>${c.author}</b><br>
+        ${c.text}
+      </div>`;
+  });
+}
+
+renderComments();
+
+sendCommentBtn.onclick = ()=>{
+  const text = commentInput.value.trim();
+  if(!text) return;
+
+  comments.push({
+    author:"User",
+    text
+  });
+
+  localStorage.setItem("chat_comments", JSON.stringify(comments));
+  commentInput.value="";
+  renderComments();
+};
+
+
+// AI CHAT FUNCTION
+function sendAiMessage(){
+  const msg = aiInput.value.trim();
+  if(!msg) return;
+
+  aiChatList.innerHTML += `<div><b>You:</b> ${msg}</div>`;
+  aiInput.value="";
+
+  setTimeout(()=>{
+    let reply = "I'm still learning.";
+
+    const t = msg.toLowerCase();
+
+    if(t.includes("hello")) reply="Hello 👋 How can I help?";
+    else if(t.includes("upload")) reply="Use upload button in gallery.";
+    else if(t.includes("delete")) reply="Select item then delete.";
+    else if(t.includes("help")) reply="You can ask about site features.";
+    else if(t.includes("who")) reply="I am your site AI assistant 🤖";
+
+    aiChatList.innerHTML += `<div><b>AI:</b> ${reply}</div>`;
+    aiChatList.scrollTop = aiChatList.scrollHeight;
+  },800);
+}
+// const topSubscribeBtn = document.getElementById('top-subscribe-btn');
+    // const floatingSubscribeBtn = document.getElementById('floating-subscribe-btn');
+    // function handleSubscribeClick() { alert('Subscription options coming soon! 🛒'); }
+    // if(topSubscribeBtn) topSubscribeBtn.addEventListener('click', handleSubscribeClick);
+    // if(floatingSubscribeBtn) floatingSubscribeBtn.addEventListener('click', handleSubscribeClick);
+ 
+  </script>
+<div id="comments-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 z-[90]"></div>
+
+<div id="comments-drawer" class="fixed inset-y-0 right-0 w-full sm:w-[420px] glass-dark border-l border-white/10 z-[100] transform translate-x-full transition-transform duration-300 flex flex-col backdrop-blur-xl bg-[#0f0c29]/90">
+
+    <div class="p-5 border-b border-white/10 flex justify-between items-center bg-white/5">
+    <h3 class="font-bold text-lg text-white flex items-center gap-2"><span>💬</span> Social Hub</h3>
+    <button id="close-comments-btn" class="text-white/50 hover:text-white transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
+  </div>
+
+    <div class="flex p-4 gap-2">
+    <button id="tab-community" class="flex-1 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all font-medium text-sm">Community</button>
+    <button id="tab-ai" class="flex-1 py-2.5 bg-transparent hover:bg-white/10 text-white/60 rounded-lg transition-all font-medium text-sm">AI Chat</button>
+  </div>
+
+    <div id="view-community" class="flex-1 flex flex-col min-h-0">
+    <div id="comments-list" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar"></div>
+
+    <div class="p-4 border-t border-white/10 bg-black/20">
+      <textarea id="comment-input" class="w-full p-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 text-sm focus:outline-none focus:border-purple-500/50 transition-colors resize-none" rows="2" placeholder="Write a message..."></textarea>
+      <button id="send-comment-btn" class="mt-3 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-2.5 rounded-xl font-semibold shadow-lg shadow-purple-900/20 transition-all active:scale-[0.98]">Post Comment</button>
+    </div>
+  </div>
+
+    <div id="view-ai" class="hidden flex-1 flex flex-col min-h-0">
+    <div id="ai-chat-list" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar"></div>
+
+    <div class="p-4 border-t border-white/10 bg-black/20 flex gap-2">
+      <input id="ai-input" class="flex-1 p-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 text-sm focus:outline-none focus:border-purple-500/50 transition-colors" placeholder="Ask AI...">
+      <button onclick="sendAiMessage()" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white px-6 rounded-xl font-semibold transition-all shadow-lg shadow-pink-900/20 active:scale-95">Send</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Fixed Social Hub Icon on Right Side -->
+<button id="comments-toggle-btn"
+ class="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all z-50 group border border-white/20 animate-in fade-in zoom-in duration-500"
+ style="box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);">
+ <span class="text-2xl group-hover:rotate-12 transition-transform drop-shadow-md">💬</span>
+ <div class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-[#1a1a2e]"></div>
+</button>
+
+<style>
+/* Custom Scrollbar for Chat */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+</style>
+
+<script>
+// ELEMENTS
+const drawer = document.getElementById("comments-drawer");
+const overlay = document.getElementById("comments-overlay");
+const toggleBtn = document.getElementById("comments-toggle-btn");
+const closeBtn = document.getElementById("close-comments-btn");
+
+const tabCommunity = document.getElementById("tab-community");
+const tabAi = document.getElementById("tab-ai");
+const viewCommunity = document.getElementById("view-community");
+const viewAi = document.getElementById("view-ai");
+
+const commentInput = document.getElementById("comment-input");
+const sendCommentBtn = document.getElementById("send-comment-btn");
+const commentsList = document.getElementById("comments-list");
+
+const aiInput = document.getElementById("ai-input");
+const aiChatList = document.getElementById("ai-chat-list");
+
+
+// OPEN CLOSE
+toggleBtn.onclick = () => {
+  overlay.classList.remove("hidden");
+  setTimeout(()=>{
+    overlay.classList.remove("opacity-0");
+    drawer.classList.remove("translate-x-full");
+  },10);
+};
+
+closeBtn.onclick = closeDrawer;
+overlay.onclick = closeDrawer;
+
+function closeDrawer(){
+  overlay.classList.add("opacity-0");
+  drawer.classList.add("translate-x-full");
+  setTimeout(()=> overlay.classList.add("hidden"),300);
+}
+
+
+// TAB SWITCH
+tabCommunity.onclick = () =>{
+  viewCommunity.classList.remove("hidden");
+  viewAi.classList.add("hidden");
+  
+  // Update Tab Styles
+  tabCommunity.classList.add('bg-white/10', 'text-white');
+  tabCommunity.classList.remove('bg-transparent', 'text-white/60');
+  
+  tabAi.classList.add('bg-transparent', 'text-white/60');
+  tabAi.classList.remove('bg-white/10', 'text-white');
+};
+
+tabAi.onclick = () =>{
+  viewAi.classList.remove("hidden");
+  viewCommunity.classList.add("hidden");
+  
+  // Update Tab Styles
+  tabAi.classList.add('bg-white/10', 'text-white');
+  tabAi.classList.remove('bg-transparent', 'text-white/60');
+  
+  tabCommunity.classList.add('bg-transparent', 'text-white/60');
+  tabCommunity.classList.remove('bg-white/10', 'text-white');
+};
+
+
+// LOCAL STORAGE COMMENTS
+let comments = JSON.parse(localStorage.getItem("chat_comments") || "[]");
+// Seed if empty
+if(comments.length === 0) {
+    comments.push({ author: 'Avanode Team', text: 'Welcome to the Social Hub! Connect with creators here.' });
+}
+
+function renderComments(){
+  commentsList.innerHTML="";
+  comments.forEach(c=>{
+    // Use consistent styling with AI chat for better look
+    const isSystem = c.author === 'Avanode Team';
+    commentsList.innerHTML += `
+      <div class="animate-in fade-in slide-in-from-bottom-2 duration-300">
+        <div class="flex items-baseline gap-2 mb-1">
+            <span class="font-bold text-xs ${isSystem ? 'text-purple-400' : 'text-blue-400'}">${c.author}</span>
+            <span class="text-[10px] text-white/30">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+        </div>
+        <div class="bg-white/5 rounded-xl rounded-tl-none p-3 text-sm text-white/90 border border-white/5 leading-relaxed">
+            ${c.text}
+        </div>
+      </div>`;
+  });
+  commentsList.scrollTop = commentsList.scrollHeight;
+}
+
+renderComments();
+
+sendCommentBtn.onclick = ()=>{
+  const text = commentInput.value.trim();
+  if(!text) return;
+
+  comments.push({
+    author: currentUsername || "Guest",
+    text
+  });
+
+  localStorage.setItem("chat_comments", JSON.stringify(comments));
+  commentInput.value="";
+  renderComments();
+};
+
+
+// AI CHAT FUNCTION
+function sendAiMessage(){
+  const msg = aiInput.value.trim();
+  if(!msg) return;
+
+  // User Message
+  aiChatList.innerHTML += `
+    <div class="flex flex-col items-end animate-in fade-in slide-in-from-bottom-2">
+        <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl rounded-tr-none p-3 text-sm text-white max-w-[85%] shadow-lg">
+            ${msg}
+        </div>
+    </div>`;
+  
+  aiInput.value="";
+  aiChatList.scrollTop = aiChatList.scrollHeight;
+
+  // AI Typing
+  const typingId = 'typing-' + Date.now();
+  aiChatList.innerHTML += `
+    <div id="${typingId}" class="flex items-center gap-2 mt-2">
+        <div class="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-[10px]">🤖</div>
+        <div class="text-white/40 text-xs italic animate-pulse">thinking...</div>
+    </div>`;
+  aiChatList.scrollTop = aiChatList.scrollHeight;
+
+  setTimeout(()=>{
+    const typingEl = document.getElementById(typingId);
+    if(typingEl) typingEl.remove();
+
+    let reply = "I'm still learning.";
+    const t = msg.toLowerCase();
+
+    if(t.includes("hello")) reply="Hello! 👋 Welcome to Avanode Digitals. How can I assist you today?";
+    else if(t.includes("upload")) reply="To upload artwork, please use the 'Upload' button in the Gallery section. Make sure you are logged in!";
+    else if(t.includes("delete")) reply="You can remove images by selecting them and clicking the trash icon in the toolbar.";
+    else if(t.includes("help")) reply="I can help you navigate the site, explain features, or provide info about our subscription tiers.";
+    else if(t.includes("who")) reply="I am Avanode AI, your virtual assistant for all things digital art and animation. 🤖";
+    else if(t.includes("price") || t.includes("cost")) reply="We offer a Free Explorer tier and a Creator tier at $19/mo. Check the Subscription section for more details.";
+
+    aiChatList.innerHTML += `
+        <div class="flex flex-col items-start animate-in fade-in slide-in-from-bottom-2">
+            <div class="flex items-center gap-2 mb-1 pl-1">
+                <div class="w-4 h-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-[8px]">AI</div>
+                <span class="text-[10px] text-white/40">Avanode Bot</span>
+            </div>
+            <div class="bg-white/10 border border-white/10 rounded-2xl rounded-tl-none p-3 text-sm text-white/90 max-w-[90%] shadow-sm">
+                ${reply}
+            </div>
+        </div>`;
+    aiChatList.scrollTop = aiChatList.scrollHeight;
+  }, 1000);
+}
+
+// Allow Enter key to send
+aiInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') sendAiMessage(); });
+commentInput.addEventListener('keypress', (e) => { if(e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendCommentBtn.click(); } });
+
+</script></body>
 </html>
