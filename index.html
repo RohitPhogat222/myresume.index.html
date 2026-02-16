@@ -151,6 +151,12 @@
       .blob-3 { width: 200px; height: 200px; }
      #mascot-container { width: 200px; height: 200px; }
     }
+    
+    /* Custom Scrollbar for Chat */
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 3px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
   </style>
  <style>@view-transition { navigation: auto; }</style>
  </head>
@@ -158,6 +164,54 @@
   <div class="min-h-full relative overflow-hidden"><div class="blob blob-1"></div>
    <div class="blob blob-2"></div>
    <div class="blob blob-3"></div>
+   
+   <!-- SOCIAL HUB HTML (Moved to top level of body for access) -->
+   <div id="comments-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-md hidden opacity-0 transition-opacity duration-500 z-[90]"></div>
+
+   <div id="comments-drawer" class="fixed inset-y-0 right-0 w-full sm:w-[420px] glass-dark border-l border-white/10 z-[100] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] flex flex-col backdrop-blur-2xl bg-[#0f0c29]/95 shadow-2xl">
+   
+       <div class="p-5 border-b border-white/10 flex justify-between items-center bg-white/5">
+       <h3 class="font-bold text-lg text-white flex items-center gap-2"><span>💬</span> Social Hub</h3>
+       <button id="close-comments-btn" class="text-white/50 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full">
+           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+       </button>
+     </div>
+   
+       <div class="flex p-4 gap-2">
+       <button id="tab-community" class="flex-1 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all font-medium text-sm">Community</button>
+       <button id="tab-ai" class="flex-1 py-2.5 bg-transparent hover:bg-white/10 text-white/60 rounded-lg transition-all font-medium text-sm">AI Chat</button>
+     </div>
+   
+       <div id="view-community" class="flex-1 flex flex-col min-h-0">
+       <div id="comments-list" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar"></div>
+   
+       <div class="p-4 border-t border-white/10 bg-black/20">
+         <textarea id="comment-input" class="w-full p-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 text-sm focus:outline-none focus:border-purple-500/50 transition-colors resize-none" rows="2" placeholder="Write a message..."></textarea>
+         <button id="send-comment-btn" class="mt-3 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-2.5 rounded-xl font-semibold shadow-lg shadow-purple-900/20 transition-all active:scale-[0.98]">Post Comment</button>
+       </div>
+     </div>
+   
+       <div id="view-ai" class="hidden flex-1 flex flex-col min-h-0">
+       <div id="ai-chat-list" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar"></div>
+   
+       <div class="p-4 border-t border-white/10 bg-black/20 flex gap-2">
+         <input id="ai-input" class="flex-1 p-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 text-sm focus:outline-none focus:border-purple-500/50 transition-colors" placeholder="Ask AI...">
+         <button onclick="sendAiMessage()" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white px-6 rounded-xl font-semibold transition-all shadow-lg shadow-pink-900/20 active:scale-95">Send</button>
+       </div>
+     </div>
+   
+   </div>
+   
+   <!-- Fixed Social Hub Icon on Right Side -->
+   <button id="comments-toggle-btn"
+    class="fixed bottom-8 right-8 h-14 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white shadow-2xl flex items-center justify-center gap-0 hover:gap-3 px-0 hover:px-6 rounded-full transition-all duration-300 z-50 group border border-white/20 animate-in fade-in zoom-in w-14 hover:w-auto overflow-hidden"
+    style="box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);">
+    <div class="relative flex-shrink-0 w-14 h-14 flex items-center justify-center">
+       <span class="text-2xl group-hover:rotate-12 transition-transform drop-shadow-md">💬</span>
+       <div class="absolute top-3 right-3 w-3 h-3 bg-red-500 rounded-full border-2 border-[#1a1a2e]"></div>
+    </div>
+    <span class="whitespace-nowrap font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden group-hover:block">Social Hub</span>
+   </button>
    
    <div id="login-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop bg-black/70" style="backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);">
     <div class="glass modal-content rounded-3xl p-8 sm:p-12 w-full max-w-md max-h-screen overflow-y-auto relative">
@@ -473,68 +527,6 @@
        </div>
    </div>
  
-   <div id="premium-store-overlay" class="fixed inset-0 z-[60] hidden bg-[#0f0c29] text-white flex flex-col overflow-y-auto">
-       <div class="absolute inset-0 z-0 opacity-40" style="background: radial-gradient(circle at 50% 50%, #2d1b4e, #000);"></div>
-       
-       <header class="relative z-10 glass sticky top-0 px-6 py-4 flex items-center justify-between">
-           <div class="flex items-center gap-3">
-               <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-lg animate-pulse">
-                  <span class="text-xl">👑</span>
-               </div>
-               <div>
-                  <h2 class="heading-font text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-500">Premium Store</h2>
-                  <p class="text-xs text-white/60">Exclusive One-Time Purchases</p>
-               </div>
-           </div>
-           <button onclick="closePremiumStore()" class="p-2 glass-dark rounded-full hover:bg-white/10 transition-colors">
-               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-           </button>
-       </header>
- 
-       <div class="relative z-10 p-6 max-w-7xl mx-auto w-full flex-1">
-           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-               
-               <div class="glass p-6 rounded-3xl group hover:bg-white/5 transition-all relative overflow-hidden border border-yellow-500/30">
-                  <div class="absolute top-0 right-0 bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-bl-xl">LIFETIME ACCESS</div>
-                  <div class="h-48 rounded-2xl bg-gradient-to-br from-purple-900 to-black mb-6 flex items-center justify-center overflow-hidden">
-                      <span class="text-6xl group-hover:scale-110 transition-transform duration-300">♾️</span>
-                  </div>
-                  <h3 class="text-2xl font-bold mb-2">Lifetime VIP Pass</h3>
-                  <p class="text-white/60 text-sm mb-4">Get permanent access to all current and future Creator features without monthly fees.</p>
-                  <div class="flex items-center justify-between mt-auto">
-                      <div class="text-3xl font-bold text-yellow-400">$299</div>
-                      <button onclick="alert('Purchase simulation: Lifetime Pass added!')" class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 transition-all">Buy Now</button>
-                  </div>
-               </div>
- 
-               <div class="glass p-6 rounded-3xl group hover:bg-white/5 transition-all relative overflow-hidden border border-cyan-500/30">
-                  <div class="h-48 rounded-2xl bg-gradient-to-br from-blue-900 to-black mb-6 flex items-center justify-center overflow-hidden">
-                      <span class="text-6xl group-hover:scale-110 transition-transform duration-300">📦</span>
-                  </div>
-                  <h3 class="text-2xl font-bold mb-2">Ultimate 3D Asset Pack</h3>
-                  <p class="text-white/60 text-sm mb-4">500+ Premium 3D models, textures, and HDRI environments for your projects.</p>
-                  <div class="flex items-center justify-between mt-auto">
-                      <div class="text-3xl font-bold text-cyan-400">$79</div>
-                      <button onclick="alert('Purchase simulation: Asset Pack added!')" class="glass-dark hover:bg-cyan-500/20 text-cyan-300 px-6 py-3 rounded-xl font-bold hover:shadow-lg border border-cyan-500/30 active:scale-95 transition-all">Add to Cart</button>
-                  </div>
-               </div>
- 
-               <div class="glass p-6 rounded-3xl group hover:bg-white/5 transition-all relative overflow-hidden border border-pink-500/30">
-                  <div class="h-48 rounded-2xl bg-gradient-to-br from-pink-900 to-black mb-6 flex items-center justify-center overflow-hidden">
-                      <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🎓</span>
-                  </div>
-                  <h3 class="text-2xl font-bold mb-2">Masterclass Series</h3>
-                  <p class="text-white/60 text-sm mb-4">10+ hours of advanced animation tutorials from industry experts.</p>
-                  <div class="flex items-center justify-between mt-auto">
-                      <div class="text-3xl font-bold text-pink-400">$120</div>
-                      <button onclick="alert('Purchase simulation: Masterclass added!')" class="glass-dark hover:bg-pink-500/20 text-pink-300 px-6 py-3 rounded-xl font-bold hover:shadow-lg border border-pink-500/30 active:scale-95 transition-all">Add to Cart</button>
-                  </div>
-               </div>
- 
-           </div>
-       </div>
-   </div>
- 
    <div id="image-lightbox" class="fixed inset-0 z-[60] hidden bg-black/90 flex items-center justify-center p-4 backdrop-blur-md opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
        <img id="lightbox-img" src="" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl transition-transform duration-300 scale-95" onclick="event.stopPropagation()">
        <button class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-2" onclick="closeLightbox()">
@@ -556,6 +548,7 @@
           <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors first:rounded-t-xl" onclick="return handleNavLink(event, 'about')"> <span>ℹ️</span> <span>About Our Company</span> </a> 
           <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors" onclick="return handleNavLink(event, 'social')"> <span>👥</span> <span>Our Social Group</span> </a> 
           <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors" onclick="return handleNavLink(event, 'anime')"> <span>🎨</span> <span>Anime &amp; Animated Wallpapers</span> </a> 
+          <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors" onclick="return handleNavLink(event, 'chat-community')"> <span>💬</span> <span>Chat Community</span> </a>
           <a href="#" class="nav-link px-4 sm:px-6 py-3 flex items-center gap-3 text-sm sm:text-base hover:bg-white/10 transition-colors" onclick="return handleNavLink(event, 'chatbot')"> 
             <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 border border-white/30 bg-black/50">
              <img src="https://api.dicebear.com/9.x/bottts-neutral/svg?seed=AvanodeAI" alt="AI" class="w-full h-full object-cover">
@@ -1580,6 +1573,13 @@
       if (section === 'about') { document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return false; }
       if (section === 'anime') { document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return false; }
       
+      // Updated Chat Community Logic
+      if (section === 'chat-community') { 
+          openComments();
+          if(typeof switchDrawerTab === 'function') switchDrawerTab('community');
+          return false; 
+      }
+      
       // Separate Logic for Standard Subscription vs Premium Store
       if (section === 'subscription') { 
          document.getElementById('subscription')?.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
@@ -2147,508 +2147,181 @@
     if(viewBtn) viewBtn.addEventListener('click', () => { if(!isLoggedIn) return; viewMode.classList.remove('hidden'); customizeMode.classList.add('hidden'); viewBtn.classList.add('active'); customizeBtn.classList.remove('active'); });
     if(customizeBtn) customizeBtn.addEventListener('click', () => { if(!isLoggedIn) return; customizeMode.classList.remove('hidden'); viewMode.classList.add('hidden'); customizeBtn.classList.add('active'); viewBtn.classList.remove('active'); });
  
-    // Comments & Subs
-    const commentsToggleBtn = document.getElementById('comments-toggle-btn');
-    const commentsDrawer = document.getElementById('comments-drawer');
-    const commentsOverlay = document.getElementById('comments-overlay');
-    const closeCommentsBtn = document.getElementById('close-comments-btn');
-    // const commentInput = document.getElementById('comment-input'); // Declared below
-    // const sendCommentBtn = document.getElementById('send-comment-btn'); // Declared below
-    // const commentsList = document.getElementById('comments-list'); // Declared below
-     
-    // AI Chat Elements
-    // const tabCommunity = document.getElementById('tab-community'); // Declared below
-    // const tabAi = document.getElementById('tab-ai'); // Declared below
-    // const viewCommunity = document.getElementById('view-community'); // Declared below
-    // const viewAi = document.getElementById('view-ai'); // Declared below
-    // const aiInput = document.getElementById('ai-input'); // Declared below
-    // const aiChatList = document.getElementById('ai-chat-list'); // Declared below
- 
-    let localComments = JSON.parse(localStorage.getItem('avanode_comments')) || [{ text: "Welcome to the community! 👋", author: "System", time: new Date().toLocaleDateString() }];
- 
-    function openComments() { commentsOverlay.classList.remove('hidden'); setTimeout(() => { commentsOverlay.classList.remove('opacity-0'); commentsDrawer.classList.remove('translate-x-full'); }, 10); }
-    function closeComments() { commentsOverlay.classList.add('opacity-0'); commentsDrawer.classList.add('translate-x-full'); setTimeout(() => commentsOverlay.classList.add('hidden'), 300); }
+    // ==================== SOCIAL HUB LOGIC ====================
+    // ELEMENTS
+    const commentsDrawer = document.getElementById("comments-drawer");
+    const commentsOverlay = document.getElementById("comments-overlay");
+    const commentsToggleBtn = document.getElementById("comments-toggle-btn");
+    const closeCommentsBtn = document.getElementById("close-comments-btn");
+
+    const tabCommunity = document.getElementById("tab-community");
+    const tabAi = document.getElementById("tab-ai");
+    const viewCommunity = document.getElementById("view-community");
+    const viewAi = document.getElementById("view-ai");
+
+    const commentInput = document.getElementById("comment-input");
+    const sendCommentBtn = document.getElementById("send-comment-btn");
+    const commentsList = document.getElementById("comments-list");
+
+    const aiInput = document.getElementById("ai-input");
+    const aiChatList = document.getElementById("ai-chat-list");
+
+    // OPEN CLOSE
+    function openComments() { 
+        commentsOverlay.classList.remove('hidden'); 
+        setTimeout(() => { 
+            commentsOverlay.classList.remove('opacity-0'); 
+            commentsDrawer.classList.remove('translate-x-full'); 
+        }, 10); 
+    }
+    
+    function closeComments() { 
+        commentsOverlay.classList.add('opacity-0'); 
+        commentsDrawer.classList.add('translate-x-full'); 
+        setTimeout(() => commentsOverlay.classList.add('hidden'), 500); // Updated timing for smoother close
+    }
+
     if(commentsToggleBtn) commentsToggleBtn.addEventListener('click', openComments);
     if(closeCommentsBtn) closeCommentsBtn.addEventListener('click', closeComments);
     if(commentsOverlay) commentsOverlay.addEventListener('click', closeComments);
- 
+
     // --- Tab Switching Logic ---
+    if(tabCommunity && tabAi) {
+        tabCommunity.onclick = () => {
+            viewCommunity.classList.remove("hidden");
+            viewAi.classList.add("hidden");
+            
+            // Update Tab Styles
+            tabCommunity.classList.add('bg-white/10', 'text-white');
+            tabCommunity.classList.remove('bg-transparent', 'text-white/60');
+            
+            tabAi.classList.add('bg-transparent', 'text-white/60');
+            tabAi.classList.remove('bg-white/10', 'text-white');
+        };
+
+        tabAi.onclick = () => {
+            viewAi.classList.remove("hidden");
+            viewCommunity.classList.add("hidden");
+            
+            // Update Tab Styles
+            tabAi.classList.add('bg-white/10', 'text-white');
+            tabAi.classList.remove('bg-transparent', 'text-white/60');
+            
+            tabCommunity.classList.add('bg-transparent', 'text-white/60');
+            tabCommunity.classList.remove('bg-white/10', 'text-white');
+        };
+    }
+
     window.switchDrawerTab = function(tab) {
         if (tab === 'community') {
-           tabCommunity.classList.add('bg-white/20', 'text-white', 'shadow-sm');
-           tabCommunity.classList.remove('text-white/50', 'hover:bg-white/5');
-           
-           tabAi.classList.add('text-white/50', 'hover:bg-white/5');
-           tabAi.classList.remove('bg-white/20', 'text-white', 'shadow-sm');
-           
-           viewCommunity.classList.remove('hidden');
-           viewAi.classList.add('hidden');
+           if(tabCommunity) tabCommunity.click();
         } else {
-           tabAi.classList.add('bg-white/20', 'text-white', 'shadow-sm');
-           tabAi.classList.remove('text-white/50', 'hover:bg-white/5');
-           
-           tabCommunity.classList.add('text-white/50', 'hover:bg-white/5');
-           tabCommunity.classList.remove('bg-white/20', 'text-white', 'shadow-sm');
-           
-           viewAi.classList.remove('hidden');
-           viewCommunity.classList.add('hidden');
+           if(tabAi) tabAi.click();
         }
     };
- 
-    // --- Community Comments Logic ---
+
+    // LOCAL STORAGE COMMENTS
+    let localComments = JSON.parse(localStorage.getItem("chat_comments") || "[]");
+    // Seed if empty
+    if(localComments.length === 0) {
+        localComments.push({ author: 'Avanode Team', text: 'Welcome to the Social Hub! Connect with creators here.' });
+    }
+
     function renderComments() {
-       if(!commentsList) return;
-       commentsList.innerHTML = localComments.map(c => `
-           <div class="glass-dark rounded-xl p-4 shadow-sm border border-white/5">
-               <div class="flex items-center gap-3 mb-2">
-                   <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-sm font-bold shadow-inner text-white">${c.author.charAt(0).toUpperCase()}</div>
-                   <div><div class="font-semibold text-sm text-white/90">${c.author}</div><div class="text-[10px] text-white/40">${c.time}</div></div>
-               </div>
-               <div class="text-white/80 text-sm ml-11 leading-relaxed whitespace-pre-wrap">${c.text}</div>
-           </div>`).join('');
-       commentsList.scrollTop = commentsList.scrollHeight;
-    }
-     
-    function postComment() {
-       const text = commentInput.value.trim();
-       if(!text) return;
-       localComments.push({ text, author: currentUsername || 'Anonymous', time: new Date().toLocaleString() });
-       localStorage.setItem('avanode_comments', JSON.stringify(localComments));
-       commentInput.value = ''; renderComments();
-    }
-    if(sendCommentBtn) sendCommentBtn.addEventListener('click', postComment);
-    renderComments();
- 
-    // --- AI Chat Logic ---
-    window.sendAiMessage = function() {
-       const text = aiInput.value.trim();
-       if(!text) return;
- 
-       // 1. Add User Message
-       const userDiv = document.createElement('div');
-       userDiv.className = 'flex items-end justify-end gap-2 animate-in fade-in slide-in-from-bottom-2';
-       userDiv.innerHTML = `
-           <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl rounded-tr-none p-3 text-sm text-white max-w-[85%] shadow-lg">
-               ${text}
-           </div>
-       `;
-       aiChatList.appendChild(userDiv);
-       aiInput.value = '';
-       aiChatList.scrollTop = aiChatList.scrollHeight;
- 
-       // 2. Simulate AI Typing/Response
-       setTimeout(() => {
-           const aiDiv = document.createElement('div');
-           aiDiv.className = 'flex items-start gap-3 animate-in fade-in slide-in-from-bottom-2';
-           
-           // Context-aware response logic
-           let response = "I'm still learning about the website, but feel free to explore the Gallery or Developer tools!";
-           const lowerText = text.toLowerCase();
-           
-           // Site-specific knowledge base
-           if(lowerText.includes('hello') || lowerText.includes('hi')) response = "Hello! I am the Avanode AI Assistant. How can I help you navigate the website today?";
-           else if(lowerText.includes('upload')) response = "To upload images, go to the 'Multimedia Gallery' section and click the 'Upload' button in the top right corner. We support JPG, PNG, and GIF formats.";
-           else if(lowerText.includes('delete') || lowerText.includes('remove')) response = "You can delete images by selecting them using the checkboxes and clicking 'Delete Selected' in the toolbar, or by hovering over an image and clicking the trash icon.";
-           else if(lowerText.includes('rohit') || lowerText.includes('founder')) response = "Rohit Phogat is the visionary founder behind Avanode Digitals. He specializes in blending Animation Arts with Sustainable Technology.";
-           else if(lowerText.includes('energy') || lowerText.includes('renewable')) response = "Avanode Digitals is dedicated to promoting renewable energy research and integrating sustainable practices into digital innovation.";
-           else if(lowerText.includes('anime')) response = "Our Anime & Animated Wallpapers section showcases curated digital art. You can find it in the navigation menu or scroll down to the gallery.";
-           else if(lowerText.includes('developer') || lowerText.includes('login')) response = "The Developer Login is located in the top right corner. If you don't have an account, you can register directly through the login modal.";
-           else if(lowerText.includes('subscribe') || lowerText.includes('premium')) response = "Our subscription plans include Explorer (Free), Creator ($19/mo), and Studio ($49/mo). Check the Subscription section for details!";
-           else if(lowerText.includes('contact') || lowerText.includes('support')) response = "You can reach our support team at +91 70151 23151 or connect via WhatsApp, LinkedIn, and Email in the footer section.";
- 
-           aiDiv.innerHTML = `
-               <div class="w-8 h-8 rounded-full overflow-hidden border border-white/30 flex-shrink-0">
-                   <img src="https://api.dicebear.com/9.x/bottts-neutral/svg?seed=AvanodeAI" alt="AI" class="w-full h-full object-cover">
-               </div>
-               <div class="glass-dark rounded-2xl rounded-tl-none p-3 text-sm text-white/90 max-w-[85%] shadow-sm">
-                   ${response}
-               </div>
-            `;
-           aiChatList.appendChild(aiDiv);
-           aiChatList.scrollTop = aiChatList.scrollHeight;
-       }, 1000); // 1 second delay for realism
-    };
- 
-    // const topSubscribeBtn = document.getElementById('top-subscribe-btn');
-    // const floatingSubscribeBtn = document.getElementById('floating-subscribe-btn');
-    // function handleSubscribeClick() { alert('Subscription options coming soon! 🛒'); }
-    // if(topSubscribeBtn) topSubscribeBtn.addEventListener('click', handleSubscribeClick);
-    // if(floatingSubscribeBtn) floatingSubscribeBtn.addEventListener('click', handleSubscribeClick);
- 
-  </script>
-<div id="comments-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
-
-<div id="comments-drawer" class="fixed inset-y-0 right-0 w-full sm:w-[420px] bg-[#111] border-l border-white/10 z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
-
-    <div class="p-5 border-b border-white/10 flex justify-between items-center">
-    <h3 class="font-bold text-lg text-white">💬 Social Hub</h3>
-    <button id="close-comments-btn">✖</button>
-  </div>
-
-    <div class="flex p-2 gap-2">
-    <button id="tab-community" class="flex-1 py-2 bg-white/20 rounded">Community</button>
-    <button id="tab-ai" class="flex-1 py-2 bg-white/5 rounded">AI Chat</button>
-  </div>
-
-    <div id="view-community" class="flex-1 flex flex-col">
-    <div id="comments-list" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
-
-    <div class="p-4 border-t border-white/10">
-      <textarea id="comment-input" class="w-full p-2 bg-black border border-white/10 rounded" placeholder="Write comment..."></textarea>
-      <button id="send-comment-btn" class="mt-2 w-full bg-blue-600 py-2 rounded">Post</button>
-    </div>
-  </div>
-
-    <div id="view-ai" class="hidden flex-1 flex flex-col">
-    <div id="ai-chat-list" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
-
-    <div class="p-4 border-t border-white/10 flex gap-2">
-      <input id="ai-input" class="flex-1 p-2 bg-black border border-white/10 rounded" placeholder="Ask AI...">
-      <button onclick="sendAiMessage()" class="bg-purple-600 px-4 rounded">Send</button>
-    </div>
-  </div>
-
-</div>
-
-<button id="comments-toggle-btn"
- style="position:fixed; bottom:20px; right:20px; width:60px; height:60px; border-radius:50%; background:#6366f1; color:white; font-size:24px;">
-💬
-</button>
-<style>
-#comments-list div{
-  background:#1a1a1a;
-  padding:10px;
-  border-radius:10px;
-}
-</style>
-<script>
-// ELEMENTS
-const drawer = document.getElementById("comments-drawer");
-const overlay = document.getElementById("comments-overlay");
-const toggleBtn = document.getElementById("comments-toggle-btn");
-const closeBtn = document.getElementById("close-comments-btn");
-
-const tabCommunity = document.getElementById("tab-community");
-const tabAi = document.getElementById("tab-ai");
-const viewCommunity = document.getElementById("view-community");
-const viewAi = document.getElementById("view-ai");
-
-const commentInput = document.getElementById("comment-input");
-const sendCommentBtn = document.getElementById("send-comment-btn");
-const commentsList = document.getElementById("comments-list");
-
-const aiInput = document.getElementById("ai-input");
-const aiChatList = document.getElementById("ai-chat-list");
-
-
-// OPEN CLOSE
-toggleBtn.onclick = () => {
-  overlay.classList.remove("hidden");
-  setTimeout(()=>{
-    overlay.classList.remove("opacity-0");
-    drawer.classList.remove("translate-x-full");
-  },10);
-};
-
-closeBtn.onclick = closeDrawer;
-overlay.onclick = closeDrawer;
-
-function closeDrawer(){
-  overlay.classList.add("opacity-0");
-  drawer.classList.add("translate-x-full");
-  setTimeout(()=> overlay.classList.add("hidden"),300);
-}
-
-
-// TAB SWITCH
-tabCommunity.onclick = () =>{
-  viewCommunity.classList.remove("hidden");
-  viewAi.classList.add("hidden");
-};
-
-tabAi.onclick = () =>{
-  viewAi.classList.remove("hidden");
-  viewCommunity.classList.add("hidden");
-};
-
-
-// LOCAL STORAGE COMMENTS
-let comments = JSON.parse(localStorage.getItem("chat_comments") || "[]");
-
-function renderComments(){
-  commentsList.innerHTML="";
-  comments.forEach(c=>{
-    commentsList.innerHTML += `
-      <div>
-        <b>${c.author}</b><br>
-        ${c.text}
-      </div>`;
-  });
-}
-
-renderComments();
-
-sendCommentBtn.onclick = ()=>{
-  const text = commentInput.value.trim();
-  if(!text) return;
-
-  comments.push({
-    author:"User",
-    text
-  });
-
-  localStorage.setItem("chat_comments", JSON.stringify(comments));
-  commentInput.value="";
-  renderComments();
-};
-
-
-// AI CHAT FUNCTION
-function sendAiMessage(){
-  const msg = aiInput.value.trim();
-  if(!msg) return;
-
-  aiChatList.innerHTML += `<div><b>You:</b> ${msg}</div>`;
-  aiInput.value="";
-
-  setTimeout(()=>{
-    let reply = "I'm still learning.";
-
-    const t = msg.toLowerCase();
-
-    if(t.includes("hello")) reply="Hello 👋 How can I help?";
-    else if(t.includes("upload")) reply="Use upload button in gallery.";
-    else if(t.includes("delete")) reply="Select item then delete.";
-    else if(t.includes("help")) reply="You can ask about site features.";
-    else if(t.includes("who")) reply="I am your site AI assistant 🤖";
-
-    aiChatList.innerHTML += `<div><b>AI:</b> ${reply}</div>`;
-    aiChatList.scrollTop = aiChatList.scrollHeight;
-  },800);
-}
-// const topSubscribeBtn = document.getElementById('top-subscribe-btn');
-    // const floatingSubscribeBtn = document.getElementById('floating-subscribe-btn');
-    // function handleSubscribeClick() { alert('Subscription options coming soon! 🛒'); }
-    // if(topSubscribeBtn) topSubscribeBtn.addEventListener('click', handleSubscribeClick);
-    // if(floatingSubscribeBtn) floatingSubscribeBtn.addEventListener('click', handleSubscribeClick);
- 
-  </script>
-<div id="comments-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 z-[90]"></div>
-
-<div id="comments-drawer" class="fixed inset-y-0 right-0 w-full sm:w-[420px] glass-dark border-l border-white/10 z-[100] transform translate-x-full transition-transform duration-300 flex flex-col backdrop-blur-xl bg-[#0f0c29]/90">
-
-    <div class="p-5 border-b border-white/10 flex justify-between items-center bg-white/5">
-    <h3 class="font-bold text-lg text-white flex items-center gap-2"><span>💬</span> Social Hub</h3>
-    <button id="close-comments-btn" class="text-white/50 hover:text-white transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-    </button>
-  </div>
-
-    <div class="flex p-4 gap-2">
-    <button id="tab-community" class="flex-1 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all font-medium text-sm">Community</button>
-    <button id="tab-ai" class="flex-1 py-2.5 bg-transparent hover:bg-white/10 text-white/60 rounded-lg transition-all font-medium text-sm">AI Chat</button>
-  </div>
-
-    <div id="view-community" class="flex-1 flex flex-col min-h-0">
-    <div id="comments-list" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar"></div>
-
-    <div class="p-4 border-t border-white/10 bg-black/20">
-      <textarea id="comment-input" class="w-full p-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 text-sm focus:outline-none focus:border-purple-500/50 transition-colors resize-none" rows="2" placeholder="Write a message..."></textarea>
-      <button id="send-comment-btn" class="mt-3 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-2.5 rounded-xl font-semibold shadow-lg shadow-purple-900/20 transition-all active:scale-[0.98]">Post Comment</button>
-    </div>
-  </div>
-
-    <div id="view-ai" class="hidden flex-1 flex flex-col min-h-0">
-    <div id="ai-chat-list" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar"></div>
-
-    <div class="p-4 border-t border-white/10 bg-black/20 flex gap-2">
-      <input id="ai-input" class="flex-1 p-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 text-sm focus:outline-none focus:border-purple-500/50 transition-colors" placeholder="Ask AI...">
-      <button onclick="sendAiMessage()" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white px-6 rounded-xl font-semibold transition-all shadow-lg shadow-pink-900/20 active:scale-95">Send</button>
-    </div>
-  </div>
-
-</div>
-
-<!-- Fixed Social Hub Icon on Right Side -->
-<button id="comments-toggle-btn"
- class="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all z-50 group border border-white/20 animate-in fade-in zoom-in duration-500"
- style="box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);">
- <span class="text-2xl group-hover:rotate-12 transition-transform drop-shadow-md">💬</span>
- <div class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-[#1a1a2e]"></div>
-</button>
-
-<style>
-/* Custom Scrollbar for Chat */
-.custom-scrollbar::-webkit-scrollbar { width: 6px; }
-.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 3px; }
-.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
-</style>
-
-<script>
-// ELEMENTS
-const drawer = document.getElementById("comments-drawer");
-const overlay = document.getElementById("comments-overlay");
-const toggleBtn = document.getElementById("comments-toggle-btn");
-const closeBtn = document.getElementById("close-comments-btn");
-
-const tabCommunity = document.getElementById("tab-community");
-const tabAi = document.getElementById("tab-ai");
-const viewCommunity = document.getElementById("view-community");
-const viewAi = document.getElementById("view-ai");
-
-const commentInput = document.getElementById("comment-input");
-const sendCommentBtn = document.getElementById("send-comment-btn");
-const commentsList = document.getElementById("comments-list");
-
-const aiInput = document.getElementById("ai-input");
-const aiChatList = document.getElementById("ai-chat-list");
-
-
-// OPEN CLOSE
-toggleBtn.onclick = () => {
-  overlay.classList.remove("hidden");
-  setTimeout(()=>{
-    overlay.classList.remove("opacity-0");
-    drawer.classList.remove("translate-x-full");
-  },10);
-};
-
-closeBtn.onclick = closeDrawer;
-overlay.onclick = closeDrawer;
-
-function closeDrawer(){
-  overlay.classList.add("opacity-0");
-  drawer.classList.add("translate-x-full");
-  setTimeout(()=> overlay.classList.add("hidden"),300);
-}
-
-
-// TAB SWITCH
-tabCommunity.onclick = () =>{
-  viewCommunity.classList.remove("hidden");
-  viewAi.classList.add("hidden");
-  
-  // Update Tab Styles
-  tabCommunity.classList.add('bg-white/10', 'text-white');
-  tabCommunity.classList.remove('bg-transparent', 'text-white/60');
-  
-  tabAi.classList.add('bg-transparent', 'text-white/60');
-  tabAi.classList.remove('bg-white/10', 'text-white');
-};
-
-tabAi.onclick = () =>{
-  viewAi.classList.remove("hidden");
-  viewCommunity.classList.add("hidden");
-  
-  // Update Tab Styles
-  tabAi.classList.add('bg-white/10', 'text-white');
-  tabAi.classList.remove('bg-transparent', 'text-white/60');
-  
-  tabCommunity.classList.add('bg-transparent', 'text-white/60');
-  tabCommunity.classList.remove('bg-white/10', 'text-white');
-};
-
-
-// LOCAL STORAGE COMMENTS
-let comments = JSON.parse(localStorage.getItem("chat_comments") || "[]");
-// Seed if empty
-if(comments.length === 0) {
-    comments.push({ author: 'Avanode Team', text: 'Welcome to the Social Hub! Connect with creators here.' });
-}
-
-function renderComments(){
-  commentsList.innerHTML="";
-  comments.forEach(c=>{
-    // Use consistent styling with AI chat for better look
-    const isSystem = c.author === 'Avanode Team';
-    commentsList.innerHTML += `
-      <div class="animate-in fade-in slide-in-from-bottom-2 duration-300">
-        <div class="flex items-baseline gap-2 mb-1">
-            <span class="font-bold text-xs ${isSystem ? 'text-purple-400' : 'text-blue-400'}">${c.author}</span>
-            <span class="text-[10px] text-white/30">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
-        </div>
-        <div class="bg-white/5 rounded-xl rounded-tl-none p-3 text-sm text-white/90 border border-white/5 leading-relaxed">
-            ${c.text}
-        </div>
-      </div>`;
-  });
-  commentsList.scrollTop = commentsList.scrollHeight;
-}
-
-renderComments();
-
-sendCommentBtn.onclick = ()=>{
-  const text = commentInput.value.trim();
-  if(!text) return;
-
-  comments.push({
-    author: currentUsername || "Guest",
-    text
-  });
-
-  localStorage.setItem("chat_comments", JSON.stringify(comments));
-  commentInput.value="";
-  renderComments();
-};
-
-
-// AI CHAT FUNCTION
-function sendAiMessage(){
-  const msg = aiInput.value.trim();
-  if(!msg) return;
-
-  // User Message
-  aiChatList.innerHTML += `
-    <div class="flex flex-col items-end animate-in fade-in slide-in-from-bottom-2">
-        <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl rounded-tr-none p-3 text-sm text-white max-w-[85%] shadow-lg">
-            ${msg}
-        </div>
-    </div>`;
-  
-  aiInput.value="";
-  aiChatList.scrollTop = aiChatList.scrollHeight;
-
-  // AI Typing
-  const typingId = 'typing-' + Date.now();
-  aiChatList.innerHTML += `
-    <div id="${typingId}" class="flex items-center gap-2 mt-2">
-        <div class="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-[10px]">🤖</div>
-        <div class="text-white/40 text-xs italic animate-pulse">thinking...</div>
-    </div>`;
-  aiChatList.scrollTop = aiChatList.scrollHeight;
-
-  setTimeout(()=>{
-    const typingEl = document.getElementById(typingId);
-    if(typingEl) typingEl.remove();
-
-    let reply = "I'm still learning.";
-    const t = msg.toLowerCase();
-
-    if(t.includes("hello")) reply="Hello! 👋 Welcome to Avanode Digitals. How can I assist you today?";
-    else if(t.includes("upload")) reply="To upload artwork, please use the 'Upload' button in the Gallery section. Make sure you are logged in!";
-    else if(t.includes("delete")) reply="You can remove images by selecting them and clicking the trash icon in the toolbar.";
-    else if(t.includes("help")) reply="I can help you navigate the site, explain features, or provide info about our subscription tiers.";
-    else if(t.includes("who")) reply="I am Avanode AI, your virtual assistant for all things digital art and animation. 🤖";
-    else if(t.includes("price") || t.includes("cost")) reply="We offer a Free Explorer tier and a Creator tier at $19/mo. Check the Subscription section for more details.";
-
-    aiChatList.innerHTML += `
-        <div class="flex flex-col items-start animate-in fade-in slide-in-from-bottom-2">
-            <div class="flex items-center gap-2 mb-1 pl-1">
-                <div class="w-4 h-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-[8px]">AI</div>
-                <span class="text-[10px] text-white/40">Avanode Bot</span>
+      if(!commentsList) return;
+      commentsList.innerHTML="";
+      localComments.forEach(c=>{
+        // Use consistent styling with AI chat for better look
+        const isSystem = c.author === 'Avanode Team';
+        commentsList.innerHTML += `
+          <div class="animate-in fade-in slide-in-from-bottom-2 duration-300">
+            <div class="flex items-baseline gap-2 mb-1">
+                <span class="font-bold text-xs ${isSystem ? 'text-purple-400' : 'text-blue-400'}">${c.author}</span>
+                <span class="text-[10px] text-white/30">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
             </div>
-            <div class="bg-white/10 border border-white/10 rounded-2xl rounded-tl-none p-3 text-sm text-white/90 max-w-[90%] shadow-sm">
-                ${reply}
+            <div class="bg-white/5 rounded-xl rounded-tl-none p-3 text-sm text-white/90 border border-white/5 leading-relaxed">
+                ${c.text}
+            </div>
+          </div>`;
+      });
+      commentsList.scrollTop = commentsList.scrollHeight;
+    }
+
+    renderComments();
+
+    if(sendCommentBtn) {
+        sendCommentBtn.onclick = ()=>{
+          const text = commentInput.value.trim();
+          if(!text) return;
+
+          localComments.push({
+            author: currentUsername || "Guest",
+            text
+          });
+
+          localStorage.setItem("chat_comments", JSON.stringify(localComments));
+          commentInput.value="";
+          renderComments();
+        };
+    }
+
+    // AI CHAT FUNCTION
+    window.sendAiMessage = function(){
+      const msg = aiInput.value.trim();
+      if(!msg) return;
+
+      // User Message
+      aiChatList.innerHTML += `
+        <div class="flex flex-col items-end animate-in fade-in slide-in-from-bottom-2">
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl rounded-tr-none p-3 text-sm text-white max-w-[85%] shadow-lg">
+                ${msg}
             </div>
         </div>`;
-    aiChatList.scrollTop = aiChatList.scrollHeight;
-  }, 1000);
-}
+      
+      aiInput.value="";
+      aiChatList.scrollTop = aiChatList.scrollHeight;
 
-// Allow Enter key to send
-aiInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') sendAiMessage(); });
-commentInput.addEventListener('keypress', (e) => { if(e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendCommentBtn.click(); } });
+      // AI Typing
+      const typingId = 'typing-' + Date.now();
+      aiChatList.innerHTML += `
+        <div id="${typingId}" class="flex items-center gap-2 mt-2">
+            <div class="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-[10px]">🤖</div>
+            <div class="text-white/40 text-xs italic animate-pulse">thinking...</div>
+        </div>`;
+      aiChatList.scrollTop = aiChatList.scrollHeight;
 
-</script></body>
+      setTimeout(()=>{
+        const typingEl = document.getElementById(typingId);
+        if(typingEl) typingEl.remove();
+
+        let reply = "I'm still learning.";
+        const t = msg.toLowerCase();
+
+        if(t.includes("hello")) reply="Hello! 👋 Welcome to Avanode Digitals. How can I assist you today?";
+        else if(t.includes("upload")) reply="To upload artwork, please use the 'Upload' button in the Gallery section. Make sure you are logged in!";
+        else if(t.includes("delete")) reply="You can remove images by selecting them and clicking the trash icon in the toolbar.";
+        else if(t.includes("help")) reply="I can help you navigate the site, explain features, or provide info about our subscription tiers.";
+        else if(t.includes("who")) reply="I am Avanode AI, your virtual assistant for all things digital art and animation. 🤖";
+        else if(t.includes("price") || t.includes("cost")) reply="We offer a Free Explorer tier and a Creator tier at $19/mo. Check the Subscription section for more details.";
+
+        aiChatList.innerHTML += `
+            <div class="flex flex-col items-start animate-in fade-in slide-in-from-bottom-2">
+                <div class="flex items-center gap-2 mb-1 pl-1">
+                    <div class="w-4 h-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-[8px]">AI</div>
+                    <span class="text-[10px] text-white/40">Avanode Bot</span>
+                </div>
+                <div class="bg-white/10 border border-white/10 rounded-2xl rounded-tl-none p-3 text-sm text-white/90 max-w-[90%] shadow-sm">
+                    ${reply}
+                </div>
+            </div>`;
+        aiChatList.scrollTop = aiChatList.scrollHeight;
+      }, 1000);
+    }
+
+    // Allow Enter key to send
+    if(aiInput) aiInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') sendAiMessage(); });
+    if(commentInput) commentInput.addEventListener('keypress', (e) => { if(e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if(sendCommentBtn) sendCommentBtn.click(); } });
+ 
+  </script>
+ </body>
 </html>
